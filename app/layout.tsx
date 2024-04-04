@@ -1,6 +1,7 @@
+'use client';
 import '@/app/ui/global.css';
-import { inter } from '@/app/ui/fonts';
-import HomeLinks from './ui/home-links';
+import NavBar from './ui/NavBar';
+import Footer from './ui/Footer';
 
 export default function RootLayout({
   children,
@@ -9,9 +10,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`$inter.className} antialiased`}>
-        <HomeLinks />
+      <body>
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,5 +1,4 @@
 'use client';
-
 import { UserGroupIcon, HomeIcon, FilmIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -8,9 +7,11 @@ import clsx from 'clsx';
 const links = [
   { name: 'Home', href: '/home', icon: HomeIcon },
   { name: 'About', href: '/about', icon: FilmIcon },
+  { name: 'Projects', href: '/projects', icon: FilmIcon },
+  { name: 'Contact', href: '/contact', icon: UserGroupIcon },
 ];
 
-export default function HomeLinks() {
+export default function NavBar() {
   const pathname = usePathname();
 
   return (
