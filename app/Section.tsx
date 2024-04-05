@@ -9,20 +9,14 @@ export default function Section() {
   });
 
   return (
-    <section >
+    <section>
       <motion.div
         className="section"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}
-        >
-        <motion.div className="section-content">
-            <h2>Section</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
-            </p>
-        </motion.div>
+      >
+        <motion.div className="section-content"></motion.div>
       </motion.div>
     </section>
   );

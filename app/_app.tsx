@@ -11,7 +11,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import RootLayout from './layout';
 
-function app({ Component }: AppProps) {
+function app({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -38,7 +38,7 @@ function app({ Component }: AppProps) {
       <AnimateSharedLayout>
         <AnimatePresence initial={false}>
           <RootLayout>
-            <Component />
+            <Component {...pageProps} />
           </RootLayout>
         </AnimatePresence>
       </AnimateSharedLayout>

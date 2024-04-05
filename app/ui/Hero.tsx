@@ -22,13 +22,17 @@ export function Hero() {
 
   return (
     <>
-              <h1 className="text-4xl font-bold">Welcome to</h1>
-              <h2 className="text-6xl font-bold">My Portfolio</h2>
-              <p className="text-2xl">
-                This is a simple portfolio website built with Next.js and
-                TailwindCSS.
-              </p>
-              <button className="btn">Get Started</button>
+      <section className="relative flex h-screen flex-col items-center justify-center text-center text-white ">
+        <div className="video-docker absolute left-0 top-0 h-full w-full overflow-hidden">
+          <video
+            className="absolute min-h-full min-w-full object-cover"
+            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+            autoPlay
+            muted
+            loop
+          ></video>
+        </div>
+      </section>
     </>
   );
 }

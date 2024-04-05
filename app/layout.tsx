@@ -1,5 +1,7 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
+import PrelineScript from './ui/PrelineScript';
+import './ui/global.css';
 
 export default function RootLayout({
   children,
@@ -8,10 +10,11 @@ export default function RootLayout({
 }) {
   const containerRef = useRef(null);
   return (
-    <div className="w-screen">
-      <div className="Layout text-light container mx-auto h-full w-screen antialiased md:px-4">
-        {children}
-      </div>
-    </div>
+    <html lang="en">
+      <body>
+        <div ref={containerRef}>{children}</div>
+      </body>
+      <PrelineScript />
+    </html>
   );
 }
