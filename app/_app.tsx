@@ -1,6 +1,4 @@
 import '../styles/globals.css';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
-
 import {
   AnimatePresence,
   AnimateSharedLayout,
@@ -13,16 +11,11 @@ import Head from 'next/head';
 import Script from 'next/script';
 import RootLayout from './layout';
 
-function app({ Component, pageProps }: AppProps) {
-  pageProps.title = 'My Custom Title';
-
+function app({ Component }: AppProps) {
   return (
     <>
       <Head>
-        <link
-          rel="shortcut icon"
-          type="image/x-icon"
-        />
+        <link rel="shortcut icon" type="image/x-icon" />
 
         <title>{`Oak Arboleda's Portfolio`}</title>
 
@@ -45,7 +38,7 @@ function app({ Component, pageProps }: AppProps) {
       <AnimateSharedLayout>
         <AnimatePresence initial={false}>
           <RootLayout>
-            <Component {...pageProps} />
+            <Component />
           </RootLayout>
         </AnimatePresence>
       </AnimateSharedLayout>

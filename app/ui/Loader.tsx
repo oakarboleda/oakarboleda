@@ -25,6 +25,4 @@ export default function Loader() {
       </motion.svg>
     </motion.div>
   );
-};
-
-
+}
