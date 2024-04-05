@@ -1,4 +1,4 @@
-import HomeLinks from '../ui/home-links';
+import HomeLinks from '../ui/NavBar';
 import LoginForm from '../ui/login-form';
 import { lusitana } from '@/app/ui/fonts';
 
