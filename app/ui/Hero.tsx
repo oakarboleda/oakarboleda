@@ -1,24 +1,15 @@
+import * as THREE from 'three';
 import React, { useState, useEffect } from 'react';
-import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-import Loader from './Loader';
+import { Canvas, useFrame, ThreeElements } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import { Model } from './BlenderFile';
 
 export function Hero() {
-  const [Loading, setLoading] = useState(true);
-  const controls = useAnimation();
-  const itemLeft = {
-    hidden: { opacity: 0, x: '-100%' },
-    enter: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: {
-        staggerChildren: 0.5,
-        ease: 'easeInOut',
-        duration: 2,
-      },
-    },
-    exit: { opacity: 0, x: '-100%' },
-  };
-
-  return <></>;
+  return (
+    <Canvas camera={{ fov: 64, position: [-2, 2, 0] }}>
+      <ambientLight intensity={5} />
+      <OrbitControls enableZoom={true} />
+      <Model />
+    </Canvas>
+  );
 }
