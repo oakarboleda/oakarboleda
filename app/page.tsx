@@ -1,65 +1,42 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
-import NavBar from '@/app/ui/NavBar';
-import Footer from '@/app/ui/Footer';
-import Hero from '@/components/Hero';
-import About from '@/app/ui/About';
-import { Info } from '@/app/ui/Info';
-import Contact from '@/app/ui/Contact';
-import Projects from '@/app/ui/Projects';
+'use client'
+
+import dynamic from 'next/dynamic'
+import React, { Suspense } from 'react'
+
+
+const Base3D = dynamic(() => import('@/components/canvas/Sections').then((mod) => mod.Base3D as React.ComponentType<any>), { ssr: false })
+const Portfo = dynamic(() => import('@/components/canvas/Sections').then((mod) => mod.Portfo as React.ComponentType<any>), { ssr: false })
+const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
+  ssr: false,
+  loading: () => (
+    <div className='flex h-screen w-screen flex-col items-center justify-center' >
+      <svg className='-ml-1 mr-3 h-5 w-5 animate-spin text-black' fill='none' viewBox='0 0 24 24'>
+        <circle className='opacity-15' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
+        <path className='opacity-75' fill='currentColor'
+          d='M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+        />
+      </svg>
+      <h1 className='my-4 text-5xl uppercase  '>Loading...</h1>
+    </div >
+  ),
+})
+const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
 export default function Page() {
   return (
-    <main id="content">
-      <div className="overflow-hidden">
-        <NavBar />
-        <section className="bg-white dark:bg-gray-900">
-          <div className="mx-auto grid max-w-screen-xl px-4 pb-8 pt-20 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-28 xl:gap-0">
-            <div className="mr-auto place-self-center lg:col-span-7">
-              <h1 className="dark:text-white mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
-                Welcome to Landwind
-              </h1>
-
-              <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-2xl font-light md:text-lg lg:mb-8 lg:text-xl"></p>
-
-              <div className="space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
-                <a
-                  href=""
-                  target="_blank"
-                  className="text-gray-900 border-gray-200 hover:bg-gray-100 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 inline-flex w-full items-center justify-center rounded-lg border px-5 py-3 text-center text-sm font-medium focus:ring-4 sm:w-auto"
-                >
-                  <svg
-                    className="text-gray-500 dark:text-gray-200 mr-2 h-4 w-4"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 496 512"
-                  >
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-                  </svg>{' '}
-                  View on GitHub
-                </a>
-              </div>
-            </div>
-
-            <div className="hidden lg:col-span-5 lg:mt-0 lg:flex">
-              <Hero />
-            </div>
-          </div>
-        </section>
-        <section>
-          <About />
-        </section>
-        <section>
-          <Projects />
-        </section>
-        <section>
-          <Info />
-        </section>
-        <section>
-          <Contact />
-        </section>
-        <Footer />
-      </div>
-    </main>
+    <>
+       {/* @ts-ignore */}
+       <View orbit className='fixed h-screen w-screen'>
+       <Suspense fallback={null}>
+         <Common color={0x303035} />
+         <Base3D route='/about' scale={10.7} position={[0, 0, 0]} />
+         <Portfo route='/portfolio' scale={10.7} position={[0, 0, 0]} />
+       </Suspense>
+     </View>
+      <div className='w-screen h-screen items-start justify-left p-12 text-left home'>
+   
+    </div>
+</>
   );
 }
+
