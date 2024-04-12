@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import ScrollArrow from '../assets/ScrollArrow.svg';
 
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 export default function Footer() {
-  const { scroll } = useLocomotiveScroll();
+ 
   return (
     <>
       <div

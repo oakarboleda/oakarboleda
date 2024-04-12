@@ -1,5 +1,12 @@
-'use client';
-import React, { useRef, useEffect } from 'react';
+"use client";
+import { useRef } from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import '@/app/ui/global.css';
+import StarsCanvas from "@/app/ui/Scene";
+import Footer from "@/app/ui/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -8,10 +15,13 @@ export default function RootLayout({
 }) {
   const containerRef = useRef(null);
   return (
-    <div className="w-screen">
-      <div className="Layout text-light container mx-auto h-full w-screen antialiased md:px-4">
-        {children}
-      </div>
-    </div>
+    <html lang="en">
+    <body>
+      <StarsCanvas />
+      {/* Navbar */}
+      {children}
+      <Footer />
+    </body>
+  </html>
   );
 }
