@@ -1,19 +1,41 @@
 'use client';
-import React, { useRef, useEffect } from 'react';
-import './ui/global.css';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const containerRef = useRef(null);
+import { useRef } from 'react';
+import dynamic from 'next/dynamic';
+const Scene = dynamic(() => import('@/components/Room'), {
+  ssr: false,
+});
+
+const Layout = ({ children }) => {
+  const ref = useRef();
+
   return (
-    <html lang="en">
-      <body>
-        <div ref={containerRef}>{children}</div>
-      </body>
-      
-    </html>
+    <div
+      ref={ref}
+      style={{
+        position: 'relative',
+        width: ' 100%',
+        height: '100%',
+        overflow: 'auto',
+        touchAction: 'auto',
+      }}
+    >
+      {children}
+      <Scene
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          pointerEvents: 'none',
+          zIndex: -1000,
+        }}
+        eventSource={ref}
+        eventPrefix="client"
+      />
+    </div>
   );
-}
+};
+
+export { Layout };
