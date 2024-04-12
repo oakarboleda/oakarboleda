@@ -2,12 +2,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import NavBar from '@/app/ui/NavBar';
 import Footer from '@/app/ui/Footer';
-import { Hero } from '@/app/ui/Hero';
+import Hero from '@/app/ui/Hero';
 import About from '@/app/ui/About';
 import { Info } from '@/app/ui/Info';
 import Contact from '@/app/ui/Contact';
 import Projects from '@/app/ui/Projects';
-import Section from '@/app/Section';
 
 export default function Page() {
   return (

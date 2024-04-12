@@ -119,13 +119,7 @@ code {
 }
 
 
-.video-docker video {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.video-docker::after {
+canvas#hero-canvas {
   content: '';
   position: absolute;
   width: 100%;

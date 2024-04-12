@@ -1,6 +1,5 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
-import PrelineScript from './ui/PrelineScript';
 import './ui/global.css';
 
 export default function RootLayout({
@@ -14,7 +13,7 @@ export default function RootLayout({
       <body>
         <div ref={containerRef}>{children}</div>
       </body>
-      <PrelineScript />
+      
     </html>
   );
 }

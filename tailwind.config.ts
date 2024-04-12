@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -5,7 +6,6 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/preline/preline.js',
   ],
   theme: {
     screens: {
@@ -43,6 +43,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('preline/plugin')],
+  plugins: [require('@tailwindcss/forms')],
 };
 export default config;

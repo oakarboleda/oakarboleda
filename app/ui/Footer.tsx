@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 import ScrollArrow from '../assets/ScrollArrow.svg';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import Image from 'next/image';
 
 export default function Footer() {
-  const { scroll } = useLocomotiveScroll();
   return (
     <>
-      <footer className="border-t border-neutral-700/20 bg-white px-6 py-10">
+      <footer className="border-neutral-700/20 bg-white border-t px-6 py-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-wrap items-center justify-between gap-10 md:items-start lg:flex-nowrap">
             <div className="w-full sm:w-1/2 lg:w-1/3">
               <a href="/">
-                <img
-                  alt="Logo"
-                  className="h-12"
-                  src="https://www.svgrepo.com/show/340614/logo-slack.svg"
-                />
+                <Image alt="Footer Image" src="" />
               </a>
-              <p className="my-4 text-gray-700">
+              <p className="text-gray-700 my-4">
                 Welcome to YourService.io, where innovation meets reliability.
                 Our mission is to empower developers and businesses with
                 cutting-edge tools and services to seamlessly build, deploy, and
@@ -29,8 +24,8 @@ export default function Footer() {
             <div className="w-full md:w-2/3">
               <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-3 sm:gap-10 md:grid-cols-4">
                 <div>
-                  <h3 className="font-bold uppercase text-gray-700">Pages</h3>
-                  <ul className="mt-4 space-y-2 text-gray-700">
+                  <h3 className="text-gray-700 font-bold uppercase">Pages</h3>
+                  <ul className="text-gray-700 mt-4 space-y-2">
                     <li>
                       <a href="/#features">Features</a>
                     </li>
@@ -43,8 +38,8 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold uppercase text-gray-700">Support</h3>
-                  <ul className="mt-4 space-y-2 text-gray-700">
+                  <h3 className="text-gray-700 font-bold uppercase">Support</h3>
+                  <ul className="text-gray-700 mt-4 space-y-2">
                     <li>
                       <a href="mailto:support@yourservice.io">
                         Request Feedback
@@ -59,16 +54,16 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold uppercase text-gray-700">Legal</h3>
-                  <ul className="mt-4 space-y-2 text-gray-700">
+                  <h3 className="text-gray-700 font-bold uppercase">Legal</h3>
+                  <ul className="text-gray-700 mt-4 space-y-2">
                     <li>
                       <a href="/privacy-policy">Privacy Policy</a>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold uppercase text-gray-700">Contact</h3>
-                  <ul className="mt-4 space-y-2 text-gray-700">
+                  <h3 className="text-gray-700 font-bold uppercase">Contact</h3>
+                  <ul className="text-gray-700 mt-4 space-y-2">
                     <li className="flex items-center gap-2">
                       <a
                         href="mailto:hello@yourservice.io"
@@ -121,7 +116,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="mt-10 flex justify-between text-sm text-gray-700">
+          <div className="text-gray-700 mt-10 flex justify-between text-sm">
             <div>© 2024 YourService.io All rights reserved.</div>
           </div>
         </div>
