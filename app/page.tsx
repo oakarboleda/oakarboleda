@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic'
 import React, { Suspense } from 'react'
 
 
-const Base3D = dynamic(() => import('@/components/canvas/Sections').then((mod) => mod.Base3D as React.ComponentType<any>), { ssr: false })
-const Portfo = dynamic(() => import('@/components/canvas/Sections').then((mod) => mod.Portfo as React.ComponentType<any>), { ssr: false })
+const Base3D = dynamic(() => import('@/components/canvas/Sections').then((mod) => mod.Base3D), { ssr: false })
+const Portfo = dynamic(() => import('@/components/canvas/Sections').then((mod) => mod.Portfo), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -28,7 +28,7 @@ export default function Page() {
        {/* @ts-ignore */}
        <View orbit className='fixed h-screen w-screen'>
        <Suspense fallback={null}>
-         <Common color={0x303035} />
+         <Common color={''} />
          <Base3D route='/about' scale={10.7} position={[0, 0, 0]} />
          <Portfo route='/portfolio' scale={10.7} position={[0, 0, 0]} />
        </Suspense>

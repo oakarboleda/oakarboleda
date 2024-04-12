@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["app/*", "src/*", "./*"]
+      "@/*": [
+        "app/*",
+        "src/*"
+      ]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -30,8 +33,7 @@
     "*/**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/lib/placeholder-data.js",
-    "scripts/seed.js"
+  
   ],
   "exclude": ["node_modules"]
 }

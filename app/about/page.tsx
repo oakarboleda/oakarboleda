@@ -32,7 +32,7 @@ export default function Page() {
         </div>
 
         <div className="col-span-12 sm:col-span-4">
-          <img src='/moji-as-monster.webp' alt={''} />
+        {/* {  <img src='/moji-as-monster.webp' alt={''} />} */}
         </div>
 
         <div className="w-full col-span-12 px-3 md:lg:xl:px-10 py-3 md:lg:xl:py-10 sm:col-span-7">
@@ -44,7 +44,7 @@ export default function Page() {
           <p></p>
           <p>Most people know me as a person-to-go when they need ideas or stuck in problems...</p>
           <p>I vigorously try for value <b>team collaboration,</b> performance in design and <b>business growth.</b> cause I think that I will grow when helping others to grow and I believe in <em>&quot;share to get&quot;.</em></p>
-          <br></br><img className='rounded' src='/moji-desk.jpg' alt={''} />
+          {/* <br></br><img className='rounded' src='/moji-desk.jpg' alt={''} /> */}
 
         </div>
 
@@ -63,128 +63,6 @@ export default function Page() {
 
         <div className="col-span-12 px-2 lg:px-44 xl:px-44 max-w-6xl text-gray-500">
 
-          <div className="relative w-fit h-fit sm:mx-auto overflow-x-auto">
-
-            <div className="mb-2 flex w-fit mx-auto gap-2">
-
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/3d/blender-2.svg" alt={''} />
-              </div>
-
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/3d/rhino-logo.webp" alt={''} />
-              </div>
-
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/3d/KeyShot-RGB.webp" alt={''} />
-              </div>
-
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/3d/v-ray.svg" alt={''} />
-              </div>
-
-            </div>
-
-            <div className="flex mb-2 w-fit mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 rounded-xl before:rounded-[11px] before:absolute before:inset-0 before:border-t ">
-                <img src="/brands/adobe/after-effects-1.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 rounded-xl before:rounded-[11px] before:absolute before:inset-0 before:border-t ">
-                <img src="/brands/adobe/adobe-photoshop-2.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 rounded-xl before:rounded-[11px] before:absolute before:inset-0 before:border-t ">
-                <img src="/brands/adobe/adobe-indesign-cc-icon.svg" alt={''} />
-              </div>
-            </div>
-
-            <div className="flex w-fit mb-2 mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/web/react-2.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/web/threejs-1.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/web/bootstrap-5-1.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/web/nodejs-icon.svg" alt={''} />
-              </div>
-            </div>
-
-            <div className="flex w-fit mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/uiux/figma-5.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/uiux/adobe-xd-2.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/vector/adobe-illustrator-cc-icon.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/vector/inkscape-logo.svg" alt={''} />
-              </div>
-            </div>
-
-            <div className="mt-2 flex w-fit mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/general/github-seeklogo.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/general/office-2.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/general/trello_icon.svg" alt={''} />
-              </div>
-            </div>
-
-            <div className="my-2 flex w-fit mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/ai/ComfyUI.png" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/ai/bing-2.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/ai/openai-wordmark.svg" alt={''} />
-              </div>
-              {/* <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/ai/logo_white.webp" alt='Open Art' />
-              </div> */}
-              <div className="border flex relative *:relative *: size-16 p-0 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/ai/A111.webp" alt={''} />
-              </div>
-            </div>
-
-            <div className="mt-2 flex w-fit mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/cms/wordpress-icon.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/cms/shopify.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/cms/drupal-4.svg" alt={''} />
-              </div>
-            </div>
-
-            <div className="mt-2 flex w-fit mx-auto gap-1">
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/crypto/bitcoin.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/crypto/ethereum-1.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/crypto/solana.svg" alt={''} />
-              </div>
-              <div className="border flex relative *:relative *: size-16 p-2 rounded-xl dark:bg-gray-650 dark:border-white/15 before:rounded-[11px] before:absolute before:inset-0 before:border-t before:border-white before:from-gray-600 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-650">
-                <img src="/brands/crypto/difi.svg" alt={''} />
-              </div>
-            </div>
-
-          </div>
         </div>
 
         <div className="footer col-span-12 p-5 text-center">

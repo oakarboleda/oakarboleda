@@ -7,42 +7,22 @@ import * as THREE from 'three';
 
 
 function OakRoom(props) {
-  const { nodes, materials } = useGLTF('/isometric-room_oak.glb');
-  const bakedTexture = useTexture('/backed_texture.webp')
-  bakedTexture.flipY = false
-
-     const meshRef = useRef(null)
-    useFrame((state, delta) => (meshRef.current.rotation.y += delta - 0.03))
-    //@ts-ignore
-    const workStationTable = nodes["single-table"].geometry
-    //@ts-ignore
-    const workStationChair1 = nodes["single-chair-1"].geometry
-    //@ts-ignore
-    const workStationChair2 = nodes["single-chair-2"].geometry
-    //@ts-ignore
-    const windowsGmy = nodes.win.geometry
-    //@ts-ignore
-    const shelves = nodes.shelf.geometry
-    //@ts-ignore
-    const projector = nodes["hanging-light-body"].geometry
-    //@ts-ignore
-    const miniRobotF = nodes.miniRobo3.geometry
-    //@ts-ignore
-    const miniRobot = nodes.miniRobo7.geometry
+  const { nodes, materials } = useGLTF('/isometric_room_oak.glb');
+  const meshRef = useRef(null)
     return (
       <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.Office2_magazines2.geometry} material={materials['LP_Rooms.012']} position={[225.933, -402.047, -115.374]} />
-        <mesh geometry={nodes.Office2_magazines3.geometry} material={materials['LP_Rooms.012']} position={[93.021, -390.586, -184.726]} />
+        <mesh geometry={(nodes.Office2_magazines2 as THREE.Mesh).geometry} material={materials['LP_Rooms.012']} position={[225.933, -402.047, -115.374]} />
+        <mesh geometry={(nodes.Office2_magazines3 as THREE.Mesh).geometry} material={materials['LP_Rooms.012']} position={[93.021, -390.586, -184.726]} />
       </group>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.Office2_Books10.geometry} material={materials['LP_Rooms.021']} position={[17.705, -388.192, 64.923]} scale={[1.2, 1, 1.2]} />
-        <mesh geometry={nodes.Office2_Books11.geometry} material={materials['LP_Rooms.012']} position={[-150.445, -368.264, -9.152]} rotation={[0, 0, -0.269]} scale={[1.305, 1, 1.305]} />
-        <mesh geometry={nodes.Office2_Books13.geometry} material={materials['LP_Rooms.021']} position={[-296.137, -388.795, 93.998]} scale={[1.508, 1, 1.508]} />
+        <mesh geometry={(nodes.Office2_Books10 as THREE.Mesh).geometry} material={materials['LP_Rooms.021']} position={[17.705, -388.192, 64.923]} scale={[1.2, 1, 1.2]} />
+        <mesh geometry={(nodes.Office2_Books11 as THREE.Mesh).geometry} material={materials['LP_Rooms.012']} position={[-150.445, -368.264, -9.152]} rotation={[0, 0, -0.269]} scale={[1.305, 1, 1.305]} />
+        <mesh geometry={(nodes.Office2_Books13 as THREE.Mesh).geometry} material={materials['LP_Rooms.021']} position={[-296.137, -388.795, 93.998]} scale={[1.508, 1, 1.508]} />
       </group>
       <group position={[2.054, -1.096, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-        <mesh geometry={nodes.Office2_Books4.geometry} material={materials['LP_Rooms.012']} position={[-280.575, -407.42, -64.566]} scale={[1.43, 1, 1.43]} />
-        <mesh geometry={nodes.Office2_Vinyls.geometry} material={materials['LP_Rooms.014']} position={[-103.677, -395.392, -137.973]} />
+        <mesh geometry={(nodes.Office2_Books4 as THREE.Mesh).geometry} material={materials['LP_Rooms.012']} position={[-280.575, -407.42, -64.566]} scale={[1.43, 1, 1.43]} />
+        <mesh geometry={(nodes.Office2_Vinyls as THREE.Mesh).geometry} material={materials['LP_Rooms.014']} position={[-103.677, -395.392, -137.973]} />
       </group>
       <group position={[-2.399, 1.746, -3.567]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         <mesh geometry={nodes.Office2_clock_1.geometry} material={materials['LP_Rooms.021']} position={[481.415, -71.516, 146.378]} rotation={[0, 0, 1.576]} />
@@ -169,5 +149,5 @@ function OakRoom(props) {
   );
 }
 
-useGLTF.preload('/medieval+study+room.glb');
+
 export default OakRoom;
