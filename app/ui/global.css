@@ -2,55 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #f5f5f5;
-  --accent: #333;
-}
-
-body {
+html,
+body,
+#root,
+.bg,
+canvas {
   margin: 0;
   padding: 0;
-  background-color: var(--background);
-  color: var(--accent);
-  padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
 }
 
-* {
-  font-family: sofia-pro, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
+.bg {
+  position: absolute;
+  background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
 }
 
-h1,
-h2,
-h3 {
-  font-family: sofia-pro, sans-serif;
-  font-weight: 600;
-  font-style: normal;
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, #3f0c5840 0%, transparent 100%);
+  pointer-events: none;
+}
+
+span {
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  width: 500px;
+  transform: translate3d(0, -50%, 0);
+  font-size: 9em;
+  line-height: 0.9em;
+  pointer-events: none;
+  top: 350px;
+  left: 50px;
+}
+
+span.header-left {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  transform: translate3d(0, -50%, 0);
+  line-height: 1em;
+  top: 200px;
+  left: 60px;
+  font-size: 4em;
+  width: 200px;
+}
+.custom-shape-divider-top-1713042292 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  color:rgba(63, 12, 88, 0.25);
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 1.2;
-  text-align: center;
-  margin: 100px 0 40px;
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0;
+  color: peru;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: left;
 }
 
-h2 {
-  font-weight: 400;
-  margin: 50px 0 10px;
+h1>span {
+  white-space: pre;
 }
 
-p {
-  margin: 0 0 30px 0;
-  font-size: 18px;
-}
 
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -58,10 +89,6 @@ footer {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  background-image: radial-gradient(
-    rgba(0, 0, 0, 0) 1px,
-    var(--background) 1px
-  );
   background-size: 4px 4px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -91,46 +118,62 @@ footer a {
   color: var(--accent);
 }
 
-code {
-  font-family: input-mono, monospace;
-  font-weight: 400;
-  font-style: normal;
+/* Mobile Nav */
+
+.burger {
+  transition: opacity 300ms ease;
+  border: 0;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  position: relative;
 }
 
-.progress {
-  position: sticky;
-  top: 0;
-  width: 80px;
-  height: 80px;
+.burger svg {
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.burger svg[data-hide="true"] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+.menu {
   margin: 0;
-  padding: 0;
+  padding: 40px 20px 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  opacity: 0;
+  left: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
 }
 
-.progress svg {
-  transform: translateX(-100px) rotate(-90deg);
+.menu li {
+  transform: translateX(-16px);
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
+    border-color 300ms ease;
+  width: 0px;
+  white-space: nowrap;
 }
 
-
-.bg {
-  stroke: var(--accent);
-  opacity: 0.2;
+.menuRendered {
+  opacity: 1;
+}
+.menuRendered li {
+  @apply border-gray-600 w-full;
+  transform: translateX(0);
+  opacity: 1;
 }
 
-.progress .indicator {
-  stroke: var(--accent);
+.menu>*+* {
+  margin-top: 24px;
 }
-
 
 section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-section div {
-  width: 200px;
-  height: 300px;
-  border: 2px dotted var(--accent);
-  position: relative;
+  background: transparent;
 }

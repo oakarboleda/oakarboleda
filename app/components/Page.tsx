@@ -66,42 +66,13 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         <GoogleAnalytics gaId="G-XYZ" />
         <GoogleTagManager gtmId="GTM-XYZ" />
       </Head>
-      <main>
+      <main className="from-purple via-blue to-blackblue w-full bg-gradient-to-t ">
         <div className="z-100 hidden sm:block">
           <NavBar />
         </div>
         <div className="z-100 -m-5 block sm:hidden">
           <MobileNavbar />
         </div>
-        <Canvas linear shadows dpr={[1.4, 2]}>
-          <fog attach="fog" args={['#272730', 16, 30]} />
-          <ambientLight intensity={0.75} />
-          <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={75}>
-            <pointLight intensity={1} position={[-10, -25, -10]} />
-            <spotLight
-              castShadow
-              intensity={2.25}
-              angle={0.2}
-              penumbra={1}
-              position={[-25, 20, -15]}
-              shadow-mapSize={[1024, 1024]}
-              shadow-bias={-0.0001}
-            />
-          </PerspectiveCamera>
-          <Suspense fallback={null}>
-            <Model />
-          </Suspense>
-          <OrbitControls
-            autoRotate
-            enablePan={false}
-            enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
-          />
-          <Stars radius={500} depth={50} count={1000} factor={10} />
-        </Canvas>
-        <Loader />
-        <div className="layer" />
         {children}
         <Footer />
       </main>

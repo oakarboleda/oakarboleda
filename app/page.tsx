@@ -1,19 +1,35 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import '@/app/ui/global.css';
-import NavBar from '@/app/ui/NavBar';
-import Footer from '@/app/ui/Footer';
-import {Hero} from "@/app/ui/Hero";
-import About from "@/app/ui/About";
-
+import Page from '@/app/components/Page';
+import { Hero } from '@/app/ui/Hero';
+import Portfolio from './ui/portfolio';
+import About from './ui/About';
+import Contact from './ui/Contact';
+import Skills from './ui/Skills';
+import CTA from './ui/CTA';
 
 export default function Home() {
   return (
-    <main className="h-full w-full">
-      <div className="flex flex-col gap-20">
-        <NavBar />
-        <Hero />
-      </div>
-    </main>
+    <Page
+      currentPage="Home"
+      meta={{
+        desc: "I'm a passionate web developer and designer coding beautiful websites and apps.",
+      }}
+    >
+      <Hero />
+      <section className="pb-15 relative mt-40 flex items-center  justify-center py-5">
+        <Portfolio />
+      </section>
+      <section className="relative flex items-center justify-center  py-5 pb-12">
+        <Skills />
+      </section>
+      <section className="relative flex items-center justify-center py-5 pb-12">
+        <About />
+      </section>
+      <section className="relative  flex items-center justify-center py-5 pb-20">
+        <CTA />
+      </section>
+    </Page>
   );
 }
