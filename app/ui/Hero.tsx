@@ -47,7 +47,7 @@ export function Hero() {
   );
 }
 
-function Model(props) {
+function Model({ props }) {
   const ref = useRef();
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(8000), { radius: 1.5 }),

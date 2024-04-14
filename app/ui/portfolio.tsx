@@ -8,7 +8,7 @@ function Projects() {
   return (
     <div className="relative flex flex-col justify-between pt-8 text-left">
       <div id="learnmore">
-        <Title title="Here are a few of my favorite projects." />
+        <Title title="Here are a few of the most recent projects." />
       </div>
       <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-3 md:gap-5">
         {projects.slice(0, 3).map((item) => {

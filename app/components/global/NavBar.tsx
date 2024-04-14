@@ -1,4 +1,4 @@
-import HomeLinks from '@/app/ui/HomeLinks';
+import HomeLinks from '@/app/components/global/HomeLinks';
 
 export default function NavBar() {
   return (

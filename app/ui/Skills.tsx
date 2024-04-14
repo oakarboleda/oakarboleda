@@ -93,21 +93,21 @@ function Skills() {
         Here is my toolbelt for success.
         <Image
           className="sqD bottom-[-80px] left-[-50px] z-[-10] lg:bottom-[-50px] lg:left-[-35px]"
-          src="placeholder.svg"
-          width={30}
-          height={30}
+          src="flatlaptop.svg"
+          width={120}
+          height={120}
           alt={''}
         />
         <Image
           className="sqD right-0 top-[140px] hidden md:block lg:top-[105px]"
-          src="placeholder.svg"
+          src="code.svg"
           width={30}
           height={30}
           alt={''}
         />
         <Image
           className="sqD right-[50px] top-[200px] hidden md:block lg:right-[50px] lg:top-[170px]"
-          src="placeholder.svg"
+          src="stack.svg"
           width={30}
           height={30}
           alt={''}

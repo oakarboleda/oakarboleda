@@ -2,17 +2,8 @@ import Footer from '@/app/components/global/Footer';
 import Head from 'next/head';
 import MobileNavbar from '@/app/components/global/MobileNavbar';
 import NavBar from '@/app/components/global/NavBar';
-import React, { ReactChildren, Suspense } from 'react';
+import React from 'react';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { Canvas, useFrame } from '@react-three/fiber';
-import {
-  Points,
-  PointMaterial,
-  PerspectiveCamera,
-  OrbitControls,
-  Stars,
-  Loader,
-} from '@react-three/drei';
 
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
@@ -66,7 +57,7 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         <GoogleAnalytics gaId="G-XYZ" />
         <GoogleTagManager gtmId="GTM-XYZ" />
       </Head>
-      <main className="from-purple via-blue to-blackblue w-full bg-gradient-to-t ">
+      <main className="relative w-full bg-gradient-to-t from-purple via-blue to-blackblue">
         <div className="z-100 hidden sm:block">
           <NavBar />
         </div>

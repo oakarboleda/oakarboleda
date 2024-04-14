@@ -60,8 +60,8 @@ function Footer() {
                     src="coffee.svg"
                     className="mr-2 h-12 opacity-100 transition-opacity hover:opacity-80"
                     alt="Buy me Coffee"
-                    width={15}
-                    height={15}
+                    width={45}
+                    height={45}
                   />
                 </a>
               </div>
@@ -73,11 +73,11 @@ function Footer() {
                   target="_blank"
                 >
                   <Image
-                    src="paypal.svg"
+                    src="PayPal.svg"
                     className="mr-2 h-12 opacity-100 transition-opacity hover:opacity-80"
                     alt="paypal"
-                    width={15}
-                    height={15}
+                    width={45}
+                    height={45}
                   />
                 </a>
               </div>
@@ -88,26 +88,26 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-fun-gray border-fun-pink-dark m-auto mt-8 w-full max-w-4xl border-t pt-8 text-center sm:mt-4 sm:pt-4">
+      <div className="m-auto mt-8 w-full max-w-4xl border-t pt-8 text-center sm:mt-4 sm:pt-4">
         <p className="flex flex-col items-center justify-center ">
-          <div className="inline-flex items-center text-xs font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center text-xs font-bold uppercase">
             Made with{' '}
-            <div className="-mt-1 ml-3 inline-flex items-center space-x-2">
+            <div className="ml-3 mt-1 inline-flex items-center space-x-2">
               <span>
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   title="React"
                   alt="React"
-                  width={15}
-                  height={15}
+                  width={25}
+                  height={25}
                 />
                 <span className="sr-only">React</span>
               </span>
               <span>
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-                  width={15}
-                  height={15}
+                  width={25}
+                  height={25}
                   className="invert"
                   title="NextJS"
                   alt={''}
@@ -117,8 +117,8 @@ function Footer() {
               <span>
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                  width={15}
-                  height={15}
+                  width={25}
+                  height={25}
                   title="TailwindCSS"
                   alt={''}
                 />
@@ -126,23 +126,20 @@ function Footer() {
               </span>
             </div>
           </div>
-          <div className="mt-2 text-xs ">
+          <div className="mt-2 text-xs">
             Made by{' '}
-            <a
-              href="mailto:contact@braydentw.io"
-              className="text-fun-gray-light font-medium"
-            ></a>
+            <a href="mailto:contact@oakarboleda.io" className="font-medium"></a>
             .
           </div>
         </p>
       </div>
       <div className="mt-8 text-center sm:-mt-12 sm:text-right">
         <a
-          className="border-fun-pink text-fun-pink inline-flex w-auto flex-shrink cursor-pointer items-center rounded-xl border px-4 py-2 text-xs font-bold opacity-50 sm:w-auto"
+          className="inline-flex w-auto flex-shrink cursor-pointer items-center rounded-xl border px-4 py-2 text-xs font-bold opacity-50 sm:w-auto"
           href="https://github.com/oakarboleda/"
           rel="nooreferrer"
         >
-          <Image src="github.svg" width={16} height={16} alt="Github Icon" />
+          <Image src="github.svg" width={45} height={45} alt="Github Icon" />
           <span className="ml-2">View Source Code </span>
         </a>
       </div>
