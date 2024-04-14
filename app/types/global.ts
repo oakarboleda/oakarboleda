@@ -53,11 +53,11 @@ export const footer: Footer = {
           link: '/',
           leavesWebsite: false,
         },
-        // {
-        //   name: "Blog",
-        //   link: "/blog",
-        //   leavesWebsite: false,
-        // },
+        {
+          name: 'Blog',
+          link: '/blog',
+          leavesWebsite: false,
+        },
         {
           name: 'Projects',
           link: '/projects',
@@ -76,25 +76,25 @@ export const footer: Footer = {
         {
           name: 'GitHub',
           link: 'https://github.com/oakarboleda',
-          icon: 'github.svg',
+
           leavesWebsite: true,
         },
         {
           name: 'LinkedIn',
           link: 'https://www.linkedin.com/in/oakarboleda/',
-          icon: 'linkedin.svg',
+
           leavesWebsite: true,
         },
         {
           name: 'Dribbble',
           link: 'https://dribbble.com/oakarboleda',
-          icon: 'dribbble.svg',
+
           leavesWebsite: true,
         },
         {
           name: 'Email',
           link: 'mailto:oakarboleda@gmail.com',
-          icon: 'mail.svg',
+
           leavesWebsite: true,
         },
       ],

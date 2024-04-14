@@ -10,13 +10,40 @@ canvas {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-style: normal;
 }
+
+ .hero-docker {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .hero-docker::after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1;
+ }
 
 .bg {
-  position: absolute;
+  position: relative;
   background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
 }
-
+.bg::after {
+ content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120%;
+  /* Adjust as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    
+}
 .layer {
   position: absolute;
   bottom: 0;
@@ -61,6 +88,7 @@ span.header-left {
   line-height: 0;
   color:rgba(63, 12, 88, 0.25);
 }
+
 
 h1 {
   position: absolute;
@@ -171,8 +199,4 @@ footer a {
 
 .menu>*+* {
   margin-top: 24px;
-}
-
-section {
-  background: transparent;
 }

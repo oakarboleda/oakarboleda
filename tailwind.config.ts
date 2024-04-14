@@ -17,6 +17,7 @@ const config: Config = {
         blue: '#272730',
         blackblue: '#171717',
         black: '#070710',
+        offWhite: '#D9DCD6',
       },
     },
     keyframes: {

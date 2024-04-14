@@ -5,7 +5,19 @@ import NavBar from '@/app/components/global/NavBar';
 import React from 'react';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
-function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
+interface PageProps {
+  currentPage: string;
+  meta: { title: string; desc: string };
+  children: React.ReactNode;
+  className?: string; // Add this line
+}
+
+function Page({
+  currentPage,
+  meta: { title, desc },
+  children,
+  className,
+}: PageProps) {
   const pageTitle = `${
     currentPage === 'Home'
       ? 'Oak Arboleda - Web Developer, Designer, Creator.'
@@ -13,7 +25,7 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   }`;
   console.log(currentPage);
   return (
-    <>
+    <div className={className}>
       <Head>
         <title>{pageTitle}</title>
         <link
@@ -56,8 +68,14 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         ></meta>
         <GoogleAnalytics gaId="G-XYZ" />
         <GoogleTagManager gtmId="GTM-XYZ" />
+
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
       </Head>
-      <main className="relative w-full bg-gradient-to-t from-purple via-blue to-blackblue">
+      <main className="relative w-full">
         <div className="z-100 hidden sm:block">
           <NavBar />
         </div>
@@ -67,7 +85,7 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         {children}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

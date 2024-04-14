@@ -16,9 +16,15 @@ export default function Home() {
       meta={{
         desc: "I'm a passionate web developer and designer coding beautiful websites and apps.",
       }}
+      className="via-11% bg-gradient-to-b from-black from-15% via-blue to-purple"
     >
-      <Hero />
-      <section className="pb-15 relative mt-40 flex items-center  justify-center py-5">
+      <section className="relative flex h-screen flex-col items-center justify-center">
+        <div className="hero-docker absolute left-0 top-0 h-full w-full overflow-hidden">
+          <Hero />
+        </div>
+      </section>
+
+      <section className="relative flex items-center  justify-center py-5 pb-10">
         <Portfolio />
       </section>
       <section className="relative flex items-center justify-center  py-5 pb-12">
