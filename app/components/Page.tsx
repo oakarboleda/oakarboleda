@@ -74,8 +74,8 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
           <MobileNavbar />
         </div>
         {children}
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
