@@ -61,7 +61,7 @@ function Footer() {
                   href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
                   target="_blank"
                 >
-                  <FontAwesomeIcon icon={faCoffee} size="2x" color="white" />
+                  <FontAwesomeIcon icon={faCoffee} size="1x" color="white" />
                 </a>
               </div>
             )}
@@ -71,7 +71,7 @@ function Footer() {
                   href={`https://paypal.me/${footer.support.paypal}`}
                   target="_blank"
                 >
-                  <FontAwesomeIcon icon={faPaypal} size="2x" color="white" />
+                  <FontAwesomeIcon icon={faPaypal} size="1x" color="white" />
                 </a>
               </div>
             )}
@@ -80,17 +80,6 @@ function Footer() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col-reverse justify-between border-t pb-10 pt-5 lg:flex-row">
-        <p className="text-sm text-gray-600">
-          <a
-            className="inline-flex w-auto flex-shrink items-center rounded-xl border px-4 py-2 text-xs font-bold opacity-50 sm:w-auto"
-            href="https://github.com/oakarboleda/"
-            rel="nooreferrer"
-          >
-            <span className="ml-2 text-sm">View Source Code </span>
-          </a>
-        </p>
       </div>
     </footer>
   );

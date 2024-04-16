@@ -3,9 +3,9 @@ import Head from 'next/head';
 import MobileNavbar from '@/app/components/global/MobileNavbar';
 import NavBar from '@/app/components/global/NavBar';
 import React from 'react';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 
-interface PageProps {
+interface props {
   currentPage: string;
   meta: { title: string; desc: string };
   children: React.ReactNode;
@@ -17,7 +17,7 @@ function Page({
   meta: { title, desc },
   children,
   className,
-}: PageProps) {
+}: props) {
   const pageTitle = `${
     currentPage === 'Home'
       ? 'Oak Arboleda - Web Developer, Designer, Creator.'
@@ -66,8 +66,7 @@ function Page({
           property="twitter:image"
           content="https://oakarboleda.io/static/misc/og.png"
         ></meta>
-        <GoogleAnalytics gaId="G-XYZ" />
-        <GoogleTagManager gtmId="GTM-XYZ" />
+
 
         <link
           rel="stylesheet"

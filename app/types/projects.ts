@@ -12,24 +12,24 @@ type Project = {
 const projects: Project[] = [
   {
     id: 0,
-    title: 'Learn.TheYEI',
+    title: 'United Health Care App',
     desc: 'All the resources you will need to get a boost into economics.',
     img: 'placeholder.svg',
     link: 'https://learn.theyei.org/',
     github: 'https://github.com/braydentw/learn.theyei',
-    tags: ['React', 'NextJS', 'TailwindCSS', 'CSS', 'Firebase'],
+    tags: ['React', 'Typescript', 'Abyss', 'CSS', 'Firebase', 'Redux'],
   },
   {
     id: 1,
-    title: 'BuildFaster',
+    title: 'Broker Optum Application',
     desc: 'Beautiful HTML templates ready-made for your next landing page.',
     img: 'placeholder.svg',
     link: 'https://buildfaster-io.vercel.app/',
-    tags: ['HTML', 'CSS', 'Javascript', 'Gumroad'],
+    tags: ['React Native', 'Storyboard', 'NX', 'Typescript'],
   },
   {
     id: 2,
-    title: 'React Emoji Search',
+    title: 'Prep Network',
     desc: '1800+ emojis at your fingertips. Ready-to-use with just a simple copy+paste.',
     img: 'placeholder.svg',
     link: 'https://react-emoji-search.braydentw.vercel.app/',
@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'BitcoinTemp',
+    title: 'Star Tribune',
     desc: 'A fun way to check the price of bitcoin! Cloudy days, sunny days, and Bitcoin Storms!',
     img: 'placeholder.svg',
     link: 'https://bitcointemp.com',

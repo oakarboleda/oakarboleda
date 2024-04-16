@@ -14,6 +14,7 @@ export default function Home() {
     <Page
       currentPage="Home"
       meta={{
+        title: "Oak Arboleda - Web Developer",
         desc: "I'm a passionate web developer and designer coding beautiful websites and apps.",
       }}
       className="via-11% bg-gradient-to-b from-black from-15% via-blue to-purple"
@@ -33,8 +34,11 @@ export default function Home() {
       <section className="relative flex items-center justify-center py-5 pb-12">
         <About />
       </section>
-      <section className="relative  flex items-center justify-center py-5 pb-20">
+      <section className="relative flex items-center justify-center py-5 pb-10">
         <CTA />
+      </section>
+      <section className="relative w-full">
+        <Contact />
       </section>
     </Page>
   );

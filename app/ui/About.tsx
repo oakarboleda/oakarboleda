@@ -1,34 +1,50 @@
-export default function About() {
+import React from 'react';
+
+
+const AboutMe = () => {
   return (
-    <>
-      <div id="about" className="relative overflow-hidden">
-        <div className="mx-auto max-w-7xl">
-          <div className="relative z-10 bg-transparent pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
-            <div className="pt-1"></div>
+      <div className={`container mx-auto px-4 py-12`}>
+        <div className="flex flex-wrap items-center">
+          <div className="w-full md:w-1/2">
+            <div className="mb-4">
+              <h2 className={`text-2xl font-semibold text-offWhite`}>About Me</h2>
+              <div className="w-12 h-1  rounded mt-2 mb-4"></div>
+            </div>
+            <p className='text-xl text-offWhite'>
+              I implement user interface design and solve user problems using web technologies. I have 3 years of making products that solve user problems and implementing responsive website
+            </p>
+            <button className='absolute'>
 
-            <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="text-offWhite sm:text-center lg:text-left">
-                <h2 className="text-offWhite my-6 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl">
-                  About me
-                </h2>
 
-                <p>
-                  Donec porttitor, enim ut dapibus lobortis, lectus sem
-                  tincidunt dui, eget ornare lectus ex non libero. Nam rhoncus
-                  diam ultrices porttitor laoreet. Ut mollis fermentum ex, vel
-                  viverra lorem volutpat sodales. In ornare porttitor odio sit
-                  amet laoreet. Sed laoreet, nulla a posuere ultrices, purus
-                  nulla tristique turpis, hendrerit rutrum augue quam ut est.
-                  Fusce malesuada posuere libero, vitae dapibus eros facilisis
-                  euismod. Sed sed lobortis justo, ut tincidunt velit. Mauris in
-                  maximus eros.
-                </p>
+            </button>
+            <div className="">
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="flex flex-col items-center">
+              <div className="flex mb-4">
+                <img className="w-12 h-12 rounded-full" src="https://placehold.co/48x48" alt="Dedication" />
+                <div className="ml-4 text-center">
+                  <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">DEDICATION</p>
+                </div>
               </div>
-            </main>
+              <div className="flex mb-4">
+                <img className="w-12 h-12 rounded-full" src="https://placehold.co/48x48" alt="Intelligence" />
+                <div className="ml-4 text-center">
+                  <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">INTELLIGENCE</p>
+                </div>
+              </div>
+              <div className="flex">
+                <img className="w-12 h-12 rounded-full" src="https://placehold.co/48x48" alt="Smart Work" />
+                <div className="ml-4 text-center">
+                  <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">SMART WORK</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"></div>
       </div>
-    </>
   );
-}
+};
+
+export default AboutMe;

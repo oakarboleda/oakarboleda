@@ -5,11 +5,16 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+type project = {
+  name: string;
+  tags: string[];
 
-function ProjectCard({ project }) {
+}
+
+function ProjectCard({children,project, ...props}: any) {
   return (
     <div
-      className="projects-center md:projects-start mx-auto flex max-w-sm flex-col md:justify-center"
+      className="projects-center md:projects-start mx-auto flex max-w-sm flex-col md:justify-center px-4"
       key={project.id}
     >
       <a
@@ -17,7 +22,8 @@ function ProjectCard({ project }) {
         target="_blank"
         className={`relative w-full rounded-xl border p-2 transition hover:-translate-y-2 hover:opacity-75`}
       >
-        <FontAwesomeIcon icon={faGithub} size="lg" />
+        <Image className="w-full rounded-b-md" alt='Project image' src={project.img} width={125} height={125} />
+
       </a>
       <div className="mt-5 w-full">
         <div className="projects-center flex justify-between">

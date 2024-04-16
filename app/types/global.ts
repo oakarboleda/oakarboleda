@@ -63,11 +63,6 @@ export const footer: Footer = {
           link: '/projects',
           leavesWebsite: false,
         },
-        {
-          name: 'Designs',
-          link: '/designs',
-          leavesWebsite: false,
-        },
       ],
     },
     {
@@ -85,12 +80,7 @@ export const footer: Footer = {
 
           leavesWebsite: true,
         },
-        {
-          name: 'Dribbble',
-          link: 'https://dribbble.com/oakarboleda',
 
-          leavesWebsite: true,
-        },
         {
           name: 'Email',
           link: 'mailto:oakarboleda@gmail.com',

@@ -13,8 +13,9 @@ import * as random from 'maath/random';
 
 export function Hero() {
   return (
-    <div className="bg">
-      <Canvas linear shadows dpr={[1.4, 2]}>
+      <section className="relative h-screen flex flex-col items-center justify-center text-center text-white ">
+        <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+          <Canvas className="min-w-full min-h-full absolute object-cover" linear shadows dpr={[1.4, 2]}>
         <fog attach="fog" args={['#272730', 16, 30]} />
         <ambientLight intensity={0.75} />
         <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={75}>
@@ -30,7 +31,7 @@ export function Hero() {
           />
         </PerspectiveCamera>
         <Suspense fallback={null}>
-          <Model />
+          <Model  />
         </Suspense>
         <OrbitControls
           autoRotate
@@ -44,10 +45,11 @@ export function Hero() {
       <div className="layer" />
       <Loader />
     </div>
+      </section>
   );
 }
 
-function Model({ props }) {
+function Model({ children, ...props }: any) {
   const ref = useRef();
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(8000), { radius: 1.5 }),
