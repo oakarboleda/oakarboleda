@@ -8,13 +8,12 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 type project = {
   name: string;
   tags: string[];
+};
 
-}
-
-function ProjectCard({children,project, ...props}: any) {
+function ProjectCard({ children, project, ...props }: any) {
   return (
     <div
-      className="projects-center md:projects-start mx-auto flex max-w-sm flex-col md:justify-center px-4"
+      className="projects-center md:projects-start mx-auto flex max-w-sm flex-col px-4 md:justify-center"
       key={project.id}
     >
       <a
@@ -22,8 +21,13 @@ function ProjectCard({children,project, ...props}: any) {
         target="_blank"
         className={`relative w-full rounded-xl border p-2 transition hover:-translate-y-2 hover:opacity-75`}
       >
-        <Image className="w-full rounded-b-md" alt='Project image' src={project.img} width={125} height={125} />
-
+        <Image
+          className="w-full rounded-b-md"
+          alt="Project image"
+          src={project.img}
+          width={125}
+          height={125}
+        />
       </a>
       <div className="mt-5 w-full">
         <div className="projects-center flex justify-between">
@@ -43,7 +47,7 @@ function ProjectCard({children,project, ...props}: any) {
             )}
           </div>
         </div>
-        <p className="text-offWhite text-left text-sm">{project.desc}</p>
+        <p className="text-left text-sm text-offWhite">{project.desc}</p>
         <ul className="-ml-2 mt-2 flex list-none flex-wrap items-center">
           {project.tags.map((tag, index) => {
             return (
