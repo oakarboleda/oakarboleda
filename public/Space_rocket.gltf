@@ -1,0 +1,141 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.1.62",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Rocket",
+      "translation": [
+        -0.002036696532741189,
+        5.513607978820801,
+        0.00010427652159705758
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6681818962097168
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cylinder.004",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "images": [
+    {
+      "name": "Colour grid palette 64 colours",
+      "uri": "Space_rocket_img0.png"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 894,
+      "max": [
+        3.2978134155273438,
+        8.119607925415039,
+        3.2956724166870117
+      ],
+      "min": [
+        -3.2937397956848145,
+        -5.500145435333252,
+        -3.2958807945251465
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 894,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 894,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 1476,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 10728,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10728,
+      "byteOffset": 10728,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7152,
+      "byteOffset": 21456,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2952,
+      "byteOffset": 28608,
+      "target": 34963
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "Space_rocket_data.bin",
+      "byteLength": 31560
+    }
+  ]
+}

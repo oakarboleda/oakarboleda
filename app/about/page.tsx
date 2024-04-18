@@ -1,7 +1,6 @@
 import React from 'react';
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
-import Image from 'next/image';
-const AboutMe = () => {
+
+const About = () => {
   return (
     <div className={`container mx-auto px-4 py-12`}>
       <div className="flex flex-wrap items-center">
@@ -10,10 +9,10 @@ const AboutMe = () => {
             <h2 className={`text-2xl font-semibold text-slate-50`}>About Me</h2>
             <div className="mb-4 mt-2  h-1 w-12 rounded"></div>
           </div>
-          <p className="text-xl text-offWhite">
-            I implement user interface design and solve user problems using web
-            technologies. I have 3 years of making products that solve user
-            problems and implementing responsive website
+          <p className="text-offWhite text-xl">
+            {' '}
+            I'm a full stack developer with experience in the following
+            technologies: React, Redux, Node, Express, MongoDB and more.
           </p>
           <button className="absolute"></button>
           <div className=""></div>
@@ -28,4 +27,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default About;

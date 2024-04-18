@@ -1,5 +1,5 @@
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
-import Astronaut from './Astro';
+import Astronaut from '../components/Astro';
 
 export default function Contact() {
   return (
@@ -67,7 +67,7 @@ export default function Contact() {
                 </div>
                 <div className="relative">
                   <a
-                    className="ease inline-block w-full rounded-lg bg-purple pb-4 pl-5 pr-5 pt-4 text-center text-xl
+                    className="ease bg-purple inline-block w-full rounded-lg pb-4 pl-5 pr-5 pt-4 text-center text-xl
                   font-medium text-white transition duration-200 hover:bg-indigo-600"
                   >
                     Submit

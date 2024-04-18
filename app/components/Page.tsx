@@ -25,7 +25,7 @@ function Page({
   }`;
   console.log(currentPage);
   return (
-    <div className={className}>
+    <>
       <Head>
         <title>{pageTitle}</title>
         <link
@@ -75,7 +75,7 @@ function Page({
       </Head>
       <main className="relative w-full">{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }
 

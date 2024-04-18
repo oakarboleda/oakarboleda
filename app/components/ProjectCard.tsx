@@ -47,7 +47,7 @@ function ProjectCard({ children, project, ...props }: any) {
             )}
           </div>
         </div>
-        <p className="text-left text-sm text-offWhite">{project.desc}</p>
+        <p className="text-offWhite text-left text-sm">{project.desc}</p>
         <ul className="-ml-2 mt-2 flex list-none flex-wrap items-center">
           {project.tags.map((tag, index) => {
             return (

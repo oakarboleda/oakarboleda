@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import projects from '@/app/types/projects';
-import ProjectCard from '@/app/ui/projectCard';
-import Title from './Title';
+import ProjectCard from '@/app/components/ProjectCard';
+import Title from '../components/global/Title';
 
 function Projects() {
   return (
@@ -17,7 +17,7 @@ function Projects() {
       </div>
       <div className="relative mt-2 w-full pb-20">
         <Link href="/projects">
-          <div className="mx-auto mt-8 w-full max-w-sm cursor-pointer whitespace-nowrap rounded-full border px-8 py-3 text-center text-offWhite transition-colors hover:text-white md:max-w-2xl">
+          <div className="text-offWhite mx-auto mt-8 w-full max-w-sm cursor-pointer whitespace-nowrap rounded-full border px-8 py-3 text-center transition-colors hover:text-white md:max-w-2xl">
             View All
           </div>
         </Link>
