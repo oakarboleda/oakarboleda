@@ -67,22 +67,13 @@ function Page({
           content="https://oakarboleda.io/static/misc/og.png"
         ></meta>
 
-
         <link
           rel="stylesheet"
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
       </Head>
-      <main className="relative w-full">
-        <div className="z-100 hidden sm:block">
-          <NavBar />
-        </div>
-        <div className="z-100 -m-5 block sm:hidden">
-          <MobileNavbar />
-        </div>
-        {children}
-      </main>
+      <main className="relative w-full">{children}</main>
       <Footer />
     </div>
   );

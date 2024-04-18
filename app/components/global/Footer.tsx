@@ -13,7 +13,7 @@ function Footer() {
         {footer.columns.map((item, index) => {
           return (
             <div key={index} className="mb-5 text-left sm:mb-0">
-              <h4 className="text-offWhite text-sm font-bold uppercase">
+              <h4 className="text-sm font-bold uppercase text-slate-50">
                 {item.title}
               </h4>
               <div>
@@ -24,7 +24,7 @@ function Footer() {
                         <a
                           href={item.link}
                           target="_blank"
-                          className="text-offWhite flex items-center"
+                          className="flex items-center text-offWhite"
                         >
                           {item.icon && (
                             <span className="-mb-1 pr-2">
@@ -51,7 +51,7 @@ function Footer() {
           );
         })}
         <div className="col-span-2 border-t pt-8 text-center sm:col-auto sm:mt-0 sm:border-0 sm:pt-0 sm:text-left">
-          <h4 className="text-offWhite text-sm font-bold uppercase">
+          <h4 className="text-sm font-bold uppercase text-offWhite">
             Support My Work
           </h4>
           <div className="mt-4 flex w-full flex-col items-center space-y-2 sm:items-start">
@@ -75,7 +75,7 @@ function Footer() {
                 </a>
               </div>
             )}
-            <p className="text-offWhite pt-1 text-xs">
+            <p className="pt-1 text-xs text-offWhite">
               {footer.support.message}
             </p>
           </div>

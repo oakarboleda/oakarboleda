@@ -9,40 +9,39 @@ import Contact from './ui/Contact';
 import Skills from './ui/Skills';
 import CTA from './ui/CTA';
 import Ufo from './ui/UFO';
+import NavBar from './components/global/NavBar';
+import MobileNavbar from './components/global/MobileNavbar';
 
 export default function Home() {
   return (
     <Page
+      className="via-purple-950 to-purple-900 bg-gradient-to-br from-slate-900 from-20% from-35% text-slate-50"
       currentPage="Home"
       meta={{
-        title: 'Oak Arboleda - Web Developer',
-        desc: "I'm a passionate web developer and designer coding beautiful websites and apps.",
+        title: 'Oak Arboleda - Senior Software Developer',
+        desc: 'YO!',
       }}
-      className="via-11% bg-gradient-to-b from-black from-15% via-blue to-purple"
     >
-      <section className="relative flex h-screen flex-col items-center justify-center">
-        <div className="hero-docker absolute left-0 top-0 h-auto w-full overflow-hidden">
-          <Hero />
-        </div>
+      <section className="relative flex h-screen items-center justify-center">
+        <Hero />
       </section>
-
-      <section className="relative flex items-center  justify-center py-5 pb-10">
+      <section className="relative flex items-center justify-center lg:py-20">
         <Portfolio />
       </section>
-      <section className="relative flex items-center justify-center  py-5 pb-12">
+      <section className="relative flex items-center justify-center  lg:py-20">
         <Skills />
       </section>
-      <section className="relative flex items-center justify-center py-5 pb-12">
+      <section className="relative flex items-center justify-center lg:py-20">
         <About />
       </section>
-      <section className="relative flex items-center justify-center py-5 pb-10">
+      <section className="relative flex items-center justify-center lg:py-20">
         <CTA />
       </section>
-      <section className="py-35 relative z-50 flex items-center justify-center pb-10">
-        <Ufo />
-      </section>
-      <section className="relative w-full">
+      <section className="bg-baltic-sea-200 relative w-full lg:py-20">
         <Contact />
+      </section>
+      <section className="relative z-50 flex items-center justify-center lg:py-20">
+        <Ufo />
       </section>
     </Page>
   );

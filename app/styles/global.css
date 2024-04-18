@@ -11,7 +11,9 @@ canvas {
   width: 100%;
   height: 100%;
 }
-
+body {
+    background: #171717;
+}
  .hero-docker {
    top: 50%;
    left: 50%;
@@ -32,6 +34,7 @@ canvas {
   position: relative;
   background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
 }
+
 .bg::after {
  content: '';
   position: absolute;
@@ -48,12 +51,12 @@ canvas {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(0deg, #3f0c5840 0%, transparent 100%);
+  height: 100%;
+  background: linear-gradient(0deg, rgba(63, 12, 88, 0.25) 0%, transparent 100%);
   pointer-events: none;
 }
 
-span {
+span.header {
   font-weight: 700;
   position: absolute;
   display: inline-block;
@@ -65,7 +68,6 @@ span {
   top: 350px;
   left: 50px;
 }
-
 span.header-left {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
@@ -337,8 +339,8 @@ footer a {
 .spaceship_balls_1 {
   position: absolute;
   top: 10px;
-  height: 50px;
-  width: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   animation: moveleft 3s linear infinite, colorswap 16s infinite;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
@@ -349,8 +351,8 @@ footer a {
   top: 0;
   left: 60px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
@@ -360,16 +362,16 @@ footer a {
   top: 0;
   left: 120px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
 .spaceship_balls_2 {
   position: absolute;
   top: 10px;
-  height: 50px;
-  width: 50px;
+  width: 25px;
+    height: 25px;
   left: 360px;
   border-radius: 50%;
   animation: moveleft 3s linear 0.64s infinite, colorswap 16s infinite;
@@ -381,8 +383,8 @@ footer a {
   top: 0;
   left: 60px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
@@ -392,16 +394,16 @@ footer a {
   top: 0;
   left: 120px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
 .spaceship_balls_3 {
   position: absolute;
   top: 10px;
-  height: 50px;
-  width: 50px;
+  width: 25px;
+    height: 25px;
   left: 720px;
   border-radius: 50%;
   animation: moveleft 3s linear 1.28s infinite, colorswap 16s infinite;
@@ -413,8 +415,8 @@ footer a {
   top: 0;
   left: 60px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
@@ -424,16 +426,16 @@ footer a {
   top: 0;
   left: 120px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
 .spaceship_balls_4 {
   position: absolute;
   top: 10px;
-  height: 50px;
-  width: 50px;
+  width: 25px;
+    height: 25px;
   left: 1080px;
   border-radius: 50%;
   animation: moveleft 3s linear 1.92s infinite, colorswap 16s infinite;
@@ -445,8 +447,8 @@ footer a {
   top: 0;
   left: 60px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
@@ -456,16 +458,16 @@ footer a {
   top: 0;
   left: 120px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
 .spaceship_balls_5 {
   position: absolute;
   top: 10px;
-  height: 50px;
-  width: 50px;
+  width: 25px;
+    height: 25px;
   left: 1440px;
   border-radius: 50%;
   animation: moveleft 3s linear 2.56s infinite, colorswap 16s infinite;
@@ -477,8 +479,8 @@ footer a {
   top: 0;
   left: 60px;
   background-color: inherit;
-  width: 50px;
-  height: 50px;
+   width: 25px;
+    height: 25px;
   border-radius: 50%;
   box-shadow: inset 6px 2px 3px 0 #c2c2c2;
 }
