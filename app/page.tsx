@@ -19,19 +19,16 @@ export default function Home() {
         desc: 'YO!',
       }}
     >
-      <section className="relative flex h-screen items-center justify-center">
+      <section className="py-[120px]">
         <Hero />
       </section>
-      <section className="relative flex items-center justify-center lg:py-20">
+      <section className="py-[120px]">
         <Portfolio />
       </section>
-      <section className="relative flex items-center justify-center  lg:py-20">
-        <Skills />
-      </section>
-      <section className="relative flex items-center justify-center lg:py-20">
+      <section className="featured-properties py-[80px] lg:py-[100px]">
         <About />
       </section>
-      <section className="relative flex items-center justify-center lg:py-20">
+      <section className="bg-white pb-[120px]">
         <CTA />
       </section>
       <section className="relative w-full bg-baltic-sea-200 lg:py-20">

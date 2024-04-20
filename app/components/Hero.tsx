@@ -2,49 +2,51 @@
 import { useState, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
-  Loader,
+ 
   useGLTF,
   OrbitControls,
   PerspectiveCamera,
   useAnimations,
   Stars,
+
 } from '@react-three/drei';
-import { Points, PointMaterial } from '@react-three/drei';
-import * as random from 'maath/random';
 
 export function Hero() {
   return (
-    <div className="bg absolute min-h-full min-w-full object-cover">
+    <div className="bg">
       <h1>
         <span style={{ fontSize: '0.4em' }}>Welcome</span>
         <br />
         <span>Let us Explore together</span>
       </h1>
       <Canvas linear shadows>
+      <directionalLight position={[0, 0, 10]} color="white" />
+      <ambientLight intensity={0.1} />
+
         <PerspectiveCamera
           makeDefault
-          position={[0, 0, 15]}
+          position={[0, 0, 30]}
           fov={295}
         ></PerspectiveCamera>
         <Suspense fallback={null}>
-          <Stars
-            radius={100} // Radius of the inner sphere (default=100)
-            depth={50} // Depth of area where stars should fit (default=50)
-            count={7000} // Amount of stars (default=5000)
-            factor={6} // Size factor (default=4)
-            saturation={0} // Saturation 0-1 (default=0)
-            fade // Faded dots (default=false)
-          />
           <Model />
         </Suspense>
         <OrbitControls
           autoRotate
-          autoRotateSpeed={2}
+          autoRotateSpeed={1}
           enablePan={false}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
+            <Stars
+            radius={100} // Radius of the inner sphere (default=100)
+            depth={50} // Depth of area where stars should fit (default=50)
+            count={7000} // Amount of stars (default=5000)
+            factor={6} // Size factor (default=4)
+            saturation={0} // Saturation 0-1 (default=0)
+            fade={false} // Faded dots (default=false)
+          />
       </Canvas>
     </div>
   );
@@ -60,17 +62,17 @@ function Model(props) {
         <group name="Earth" rotation={[-Math.PI, 0.854, -Math.PI]}>
           <mesh
             name="Icosphere"
-            geometry={nodes.Icosphere.geometry}
+            geometry={(nodes.Icosphere as any).geometry}
             material={materials.Water}
           />
           <mesh
             name="Icosphere_1"
-            geometry={nodes.Icosphere_1.geometry}
+            geometry={(nodes.Icosphere_1 as any).geometry}
             material={materials.Earth}
           />
           <mesh
             name="Moon"
-            geometry={nodes.Moon.geometry}
+            geometry={(nodes.Moon as any).geometry}
             material={materials.Moon}
             position={[16.025, -0.006, 0.031]}
             rotation={[0, -1.497, 0]}
@@ -79,7 +81,7 @@ function Model(props) {
         <group name="Venus" rotation={[-Math.PI, 0.411, -Math.PI]}>
           <mesh
             name="Icosphere004"
-            geometry={nodes.Icosphere004.geometry}
+            geometry={(nodes.Icosphere004 as any).geometry}
             material={materials.Venus}
           />
           <mesh
@@ -165,7 +167,7 @@ function Model(props) {
         </group>
         <mesh
           name="Sun"
-          geometry={nodes.Sun.geometry}
+          geometry={(nodes.Sun as any).geometry}
           material={materials.Sun}
           rotation={[-0.104, 0.127, -0.582]}
         />

@@ -73,7 +73,7 @@ function Page({
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
       </Head>
-      <main className="relative w-full">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

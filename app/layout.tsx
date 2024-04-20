@@ -1,8 +1,11 @@
 'use client';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/app/styles/global.css';
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function RootLayout({
   children,
@@ -10,9 +13,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const containerRef = useRef(null);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        data-aos-easing="ease"
+        data-aos-duration="600"
+        data-aos-deplay="100"
+      >
+        {children}
+      </body>
     </html>
   );
 }
