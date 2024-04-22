@@ -1,32 +1,35 @@
 'use client';
 
-import {
-  UserGroupIcon,
-  HomeIcon,
-  CodeBracketIcon,
-  QuestionMarkCircleIcon,
-  SparklesIcon,
-  EnvelopeIcon,
-} from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
+import {
+  faHouse,
+  faCode,
+  faUserAstronaut,
+  faEnvelope,
+  faQuestionCircle,
+  faBlog,
+} from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 function classNames(classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
 const links = [
-  { name: 'Home', href: '/home', icon: HomeIcon },
+  { name: 'Home', href: '/home', icon: faHouse },
   {
     name: 'About',
     href: '/about',
-    icon: SparklesIcon,
+    icon: faUserAstronaut,
   },
-  { name: 'Projects', href: '/projects', icon: CodeBracketIcon },
-  { name: 'Contact', href: '/contact', icon: EnvelopeIcon },
-  { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon },
-  { name: 'Blog', href: '/blog', icon: UserGroupIcon },
+  { name: 'Projects', href: '/projects', icon: faCode },
+  { name: 'Contact', href: '/contact', icon: faEnvelope },
+  { name: 'FAQ', href: '/faq', icon: faQuestionCircle },
+  { name: 'Blog', href: '/blog', icon: faBlog },
 ];
 
 export default function HomeLinks() {
@@ -41,7 +44,7 @@ export default function HomeLinks() {
             href={link.href}
             className="flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium"
           >
-            <LinkIcon className="w-6" />
+            <FontAwesomeIcon className="w-6" icon={link.icon} />
 
             <p className="">{link.name}</p>
           </Link>

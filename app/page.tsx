@@ -19,10 +19,8 @@ export default function Home() {
         desc: 'YO!',
       }}
     >
-      <section className="py-[120px]">
-        <Hero />
-      </section>
-      <section className="py-[120px]">
+      <section className="py-[120px]">{/*<Hero />*/}</section>
+      <section className="bg-secondary py-[120px]">
         <Portfolio />
       </section>
       <section className="featured-properties py-[80px] lg:py-[100px]">

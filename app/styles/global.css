@@ -126,6 +126,21 @@ canvas {
   height: 100%;
 }
 
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background: rgb(255 182 70/var(--tw-bg-opacity));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background: rgb(255 233 217/var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background: rgb(255 255 255/var(--tw-bg-opacity));
+}
+
  .hero-docker {
    top: 50%;
    left: 50%;

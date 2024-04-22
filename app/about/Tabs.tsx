@@ -1,0 +1,71 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { Button } from '@/app/components/global/button';
+import tabsData from '@/app/types/tabs';
+
+export function Tabs({
+  activeTabIndex,
+  setActiveTabIndex,
+}: {
+  activeTabIndex: number;
+  setActiveTabIndex: React.Dispatch<React.SetStateAction<number>>;
+}) {
+  const tabsRef = useRef<HTMLButtonElement[]>([]);
+
+  useEffect(() => {
+    // Rest of the code
+  }, [activeTabIndex]);
+
+  return (
+    <div>
+      <div className="tabs my-8 flex flex-wrap gap-2 lg:my-0 lg:flex-col">
+        <div className="tabs my-8 flex flex-wrap gap-2 lg:my-0 lg:flex-col">
+          {tabsData.map((tab, id) => {
+            return (
+              <button
+                key={id}
+                ref={(el) => (tabsRef.current[id] = el as HTMLButtonElement)}
+                className={`aria-disabled:opacity-50' flex h-10 items-center rounded-lg bg-ripe-plum-900 px-4 text-sm font-medium text-white transition-colors hover:bg-ripe-plum-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:bg-blue-600 aria-disabled:cursor-not-allowed
+ ${
+   activeTabIndex === id ? 'active' : ''
+ } group inline-flex items-center justify-between`}
+                onClick={() => {
+                  setActiveTabIndex(id);
+                }}
+              >
+                {tab.label}
+
+                <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 17L17 7"
+                      stroke="currentColor"
+                      strokeOpacity="0.9"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M7 7H17V17"
+                      stroke="currentColor"
+                      strokeOpacity="0.9"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        {/* Rest of the code */}
+      </div>
+    </div>
+  );
+}
