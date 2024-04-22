@@ -28,6 +28,7 @@
     "clsx": "^2.0.0",
     "devicon": "^2.16.0",
     "framer-motion": "^11.0.24",
+    "gltfjsx": "^6.2.16",
     "locomotive-scroll": "^4.1.4",
     "maath": "^0.10.7",
     "next": "^14.0.2",
