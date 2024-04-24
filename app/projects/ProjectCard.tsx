@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 type project = {
   name: string;
   tags: string[];
@@ -12,17 +13,14 @@ type project = {
 
 function ProjectCard({ children, project, ...props }: any) {
   return (
-    <div
-      className="projects-center md:projects-start mx-auto flex max-w-sm flex-col px-4 md:justify-center"
-      key={project.id}
-    >
+    <div className="projects-center md:projects-start mx-auto flex max-w-sm flex-col md:justify-center">
       <a
         href={project.link || project.github}
         target="_blank"
-        className={`relative w-full rounded-xl border p-2 transition hover:-translate-y-2 hover:opacity-75`}
+        className={`will-change-projectCard relative w-full rounded-xl border border-b-fuchsia-950 p-2 transition hover:-translate-y-2 hover:border-b-baltic-sea-600 hover:opacity-75`}
       >
         <Image
-          className="w-full rounded-b-md"
+          className="w-full rounded-md"
           alt="Project image"
           src={project.img}
           width={125}
@@ -47,20 +45,7 @@ function ProjectCard({ children, project, ...props }: any) {
             )}
           </div>
         </div>
-        <p className="text-offWhite text-left text-sm">{project.desc}</p>
-        <ul className="-ml-2 mt-2 flex list-none flex-wrap items-center">
-          {project.tags.map((tag, index) => {
-            return (
-              <li key={tag}>
-                <Link href={`/projects/tag/${kebabCase(tag)}`}>
-                  <div className="m-1 cursor-pointer rounded-lg px-2 py-1 text-sm hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <p className="text-left text-sm text-slate-200">{project.desc}</p>
       </div>
     </div>
   );

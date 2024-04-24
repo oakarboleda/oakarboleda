@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import '@/app/styles/global.css';
+import '@/app/styles/custom.scss';
+
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';

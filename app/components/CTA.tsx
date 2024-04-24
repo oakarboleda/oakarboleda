@@ -1,18 +1,19 @@
 import React from 'react';
 import { Button } from './global/button';
+import { syne } from '@/app/components/fonts';
 
 function CTA() {
   return (
-    <div className="container">
+    <div className="container text-slate-100">
       <div className="grid grid-cols-12">
         <div className="col-span-12">
           <div className="mb-16 flex flex-col justify-between md:flex-row md:items-end">
             <div
-              className="font-Syne aos-init aos-animate flex max-w-[325px] flex-col flex-wrap gap-y-2 font-bold leading-none lg:max-w-[400px] xl:max-w-[527px]"
+              className="aos-init aos-animate flex max-w-[325px] flex-col flex-wrap gap-y-2 font-bold leading-none lg:max-w-[400px] xl:max-w-[527px]"
               data-aos="fade-up"
             >
-              <span className="text-orange text-xl">Pricing</span>
-              <h3 className="text-black-800 text-4xl tracking-[-1.5px] lg:text-5xl xl:text-[64px]">
+              <span className="font-xl text-orange-600">Pricing</span>
+              <h3 className="text-4xl tracking-[-1.5px] lg:text-5xl xl:text-[64px]">
                 Stay chill and pick your{' '}
                 <span className="before:bg-primary relative z-[1] before:absolute before:left-[-4px] before:top-[13px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:before:h-[48px] lg:before:w-[48px] xl:before:h-[64px] xl:before:w-[64px]">
                   pl
@@ -25,8 +26,8 @@ function CTA() {
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              <a
-                href="contact.html"
+              <Button
+                href={'/contact'}
                 className="btn-primary group flex flex-wrap items-center"
               >
                 Contact for Custom Project
@@ -56,7 +57,7 @@ function CTA() {
                     />
                   </svg>
                 </span>
-              </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -64,24 +65,26 @@ function CTA() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {/* Pricing Item Start */}
         <div
-          className="bg-black-500 aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl p-6 transition-all hover:bg-white hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl p-6 transition-all hover:bg-white hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={300}
         >
           <div className="flex items-center justify-between">
-            <span className="text-black-text-600 font-sans text-lg font-normal leading-none">
+            <span className="font-sans text-lg font-normal leading-none">
               Basic
             </span>
-            <span className="font-Syne text-orange text-xl font-bold">
-              $48/h
+            <span className="text-orange font-Syne text-xl font-bold">
+              $30/h
             </span>
           </div>
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4 className="font-Syne text-black-800 mb-1 text-[32px] font-bold leading-10">
+              <h4
+                className={`${syne.className} mb-1 text-[32px] font-bold leading-10`}
+              >
                 20 hrs
               </h4>
-              <p className="text-black-text-600 font-sans text-lg font-normal leading-none">
+              <p className=" font-sans text-lg font-normal leading-none">
                 10 hours per week
               </p>
             </div>
@@ -129,13 +132,15 @@ function CTA() {
             <span className="text-black-text-600 font-sans text-lg font-normal leading-none">
               Premium
             </span>
-            <span className="font-Syne text-orange text-xl font-bold">
-              $60/h
+            <span className="text-orange font-Syne text-xl font-bold">
+              $35/h
             </span>
           </div>
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4 className="font-Syne text-black-800 mb-1 text-[32px] font-bold leading-10">
+              <h4
+                className={`${syne.className} mb-1 text-[32px] font-bold leading-10`}
+              >
                 30 hrs
               </h4>
               <p className="text-black-text-600 font-sans text-lg font-normal leading-none">
@@ -183,20 +188,22 @@ function CTA() {
           data-aos-delay={700}
         >
           <div className="flex items-center justify-between">
-            <span className="text-black-text-600 font-sans text-lg font-normal leading-none">
+            <span className="font-sans text-lg font-normal leading-none">
               Platinum
             </span>
-            <span className="font-Syne text-orange text-xl font-bold">
-              $60/h
+            <span className="text-orange font-Syne text-xl font-bold">
+              $65/h
             </span>
           </div>
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4 className="font-Syne text-black-800 mb-1 text-[32px] font-bold leading-10">
+              <h4
+                className={`${syne.className} mb-1 text-[32px] font-bold leading-10`}
+              >
                 20 hrs
               </h4>
               <p className="text-black-text-600 font-sans text-lg font-normal leading-none">
-                80 hours per week
+                40 hours per week
               </p>
             </div>
             <a

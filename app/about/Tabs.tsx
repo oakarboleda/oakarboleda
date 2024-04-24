@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/app/components/global/button';
 import tabsData from '@/app/types/tabs';
+import { syne } from '../components/fonts';
 
 export function Tabs({
   activeTabIndex,
@@ -16,7 +17,7 @@ export function Tabs({
   }, [activeTabIndex]);
 
   return (
-    <div>
+    <div className={`${syne.className}`}>
       <div className="tabs my-8 flex flex-wrap gap-2 lg:my-0 lg:flex-col">
         <div className="tabs my-8 flex flex-wrap gap-2 lg:my-0 lg:flex-col">
           {tabsData.map((tab, id) => {
@@ -24,7 +25,7 @@ export function Tabs({
               <button
                 key={id}
                 ref={(el) => (tabsRef.current[id] = el as HTMLButtonElement)}
-                className={`aria-disabled:opacity-50' flex h-10 items-center rounded-lg bg-ripe-plum-900 px-4 text-sm font-medium text-white transition-colors hover:bg-ripe-plum-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:bg-blue-600 aria-disabled:cursor-not-allowed
+                className={`aria-disabled:opacity-50' flex h-10 items-center rounded-lg bg-ripe-plum-900 px-4 text-sm font-medium text-white transition-colors hover:bg-ripe-plum-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 aria-disabled:cursor-not-allowed
  ${
    activeTabIndex === id ? 'active' : ''
  } group inline-flex items-center justify-between`}

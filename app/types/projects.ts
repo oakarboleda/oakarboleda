@@ -79,10 +79,12 @@ const projects: Project[] = [
   },
 ];
 
-export const allTags = [];
+export const allTags: string[] = [];
 
 projects.forEach((project) => {
-  project.tags.forEach((tag) => !allTags.includes(tag) && allTags.push(tag));
+  project.tags.forEach((tag) => {
+    return !allTags.includes(tag) && allTags.push(tag);
+  });
 });
 
 export const allKebabTags = allTags.map((tag) => kebabCase(tag));

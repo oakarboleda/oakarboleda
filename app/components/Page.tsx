@@ -73,7 +73,15 @@ function Page({
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
       </Head>
-      <main>{children}</main>
+      <main>
+        <div className="sky">
+          <div className="stars"></div>
+          <div className="stars1"></div>
+          <div className="stars2"></div>
+          <div className="shooting-stars"></div>
+          {children}
+        </div>
+      </main>
       <Footer />
     </>
   );

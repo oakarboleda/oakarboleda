@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Syne: ['Syne', 'sans-serif'],
+      },
       colors: {
         'ripe-plum': {
           '50': '#fbf6fe',
@@ -73,6 +76,19 @@ const config: Config = {
           '800': '#1e293b',
           '900': '#0f172a',
           '950': '#020617',
+        },
+        'orange-peel': {
+          '50': '#fff8f1',
+          '100': '#ffeddf',
+          '200': '#ffddbb',
+          '300': '#ffbe7e',
+          '400': '#ff9f3f',
+          '500': '#ff8000',
+          '600': '#e66e00',
+          '700': '#bf5a00',
+          '800': '#994700',
+          '900': '#7a3a00',
+          '950': '#3f1f00',
         },
       },
     },
