@@ -9,6 +9,8 @@ import Skills from './skills/Skills';
 import CTA from './components/CTA';
 import Ufo from './components/UFO';
 import Projects from '@/app/projects/projects';
+import Divider from './components/global/divider';
+import Blog from './blog/page';
 
 export default function Home() {
   return (
@@ -19,28 +21,31 @@ export default function Home() {
         desc: 'YO!',
       }}
     >
-      <section className="">
+      <section className="bg">
         <Hero />
       </section>
-      <section className="py-[80px]">
+      {/* 
+      <section className="bg-transparent py-[120px]">
         <Skills />
-      </section>
-
-      <section className="featured-properties py-[80px] lg:py-[100px]">
+      </section> */}
+      <section className="bg-transparent py-[80px] lg:py-[100px]">
         <About />
       </section>
-      <section className="pb-4">
+      <section className="bg-baltic-sea-950 pb-4">
         <Projects />
       </section>
       <section className="py-[120px]">
         <CTA />
       </section>
-      <section className="relative w-full lg:py-20">
+      <section className="bg-slate-200 py-[120px]">
+        <Blog />
+      </section>
+      <section className="relative w-full bg-slate-300 lg:py-20">
         <Contact />
       </section>
-      <section className="relative w-full lg:py-10">
+      {/* <section className="relative w-full lg:py-10">
         <Ufo />
-      </section>
+      </section> */}
     </Page>
   );
 }

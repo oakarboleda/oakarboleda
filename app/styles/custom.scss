@@ -13,67 +13,65 @@ $numShootingStars: 10;
 
 $width: 100%;
 
-@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+button {
+  --border-width: 4px;
+  --corner-value: 20px;
+  --cropped-corner: polygon(100% 0, 100% calc(100% - var(--corner-value)), calc(100% - var(--corner-value)) 100%, 0 100%, 0 0);
+}
+.polygon-btn {
+  background: transparent;
+  color: inherit;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: var(--border-width) solid #FFFFFF;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-clip-path: var(--cropped-corner);
+  clip-path: var(--cropped-corner);
+  position: relative;
+  min-width: 15rem;
+  transition: all .18s ease-out;
+  letter-spacing: 2px;
+  
+  // animation-iteration-count: 1;
+  // animation-duration: 0.7s;
+  // animation-fill-mode: forwards;
+  
   &:after {
     position: absolute;
-    content: "";
-    top: $y;
-    left: $x;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale($size);
-    -webkit-filter: blur($spread);
-    -moz-filter: blur($spread);
-    -ms-filter: blur($spread);
-    filter: blur($spread);
-    background: linear-gradient(270deg, $colorA, $colorB);
-    background-size: 200% 200%;
-    animation: animateGlow $duration ease infinite;
+    content: '';
+    display: block;
+    width: var(--corner-value);
+    height: calc(var(--corner-value) * 2);
+    bottom: calc(var(--corner-value) * -1);
+    right: calc(var(--corner-value) * -0.3);
+    background: #FFFFFF;
+    transform: rotate(45deg) translateX(0%)
+  }
+  
+  // &:after {
+  //   position: absolute;
+  //   content: '';
+  //   display: block;
+  //   width: 0;
+  //   height: 0;
+  //   border-right: 19px solid #FFFFFF;
+  //   border-top: 20px solid transparent;
+  //   border-bottom: 20px solid transparent;
+  //   right: 0;
+  // }
+  
+  &:hover {
+    color: #060606;
+    background-color: #FFFFFF;
+    letter-spacing: 1px;
     
-    @keyframes animateGlow {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
+    
+    // animation-name: blinking-btn;
   }
 }
-.overlay {
-  width: 100%;
-  max-width: 1140px;
-  max-height: 640px;
-  padding: 8rem 6rem;
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.375);
-  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-}
-.code-container {
-  resize: both;
-  overflow: hidden;
-  margin: auto;
-  width: 80vw;
-  height: 80vh;
-  min-width: 420px;
-  min-height: 255px;
-  position: relative;
-  --glow-margin: 70px;
-  filter: drop-shadow(0 0 75px rgb(128 0 255 / 0.25));
-}
 
-.glow-container {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  z-index: 2;
-  pointer-events: none;
-  --glow: drop-shadow(0 0 1px violet);
-  filter: var(--glow) brightness(1.5) drop-shadow(0 0 10px violet);
-}
 body {
   height: 100%;
       display: block;

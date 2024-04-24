@@ -33,7 +33,7 @@ function About() {
             className={`${syne.className} mb-4 flex flex-col flex-wrap gap-y-2 font-bold leading-none`}
           >
             <span className="text-xl">Resume</span>
-            <h3 className="text-black-800 before:bg-primary relative text-4xl tracking-[-1.5px] before:absolute before:left-0 before:top-[2px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:text-5xl lg:before:h-[48px] lg:before:w-[48px] xl:text-[64px] xl:before:h-[64px] xl:before:w-[64px]">
+            <h3 className="before:bg-primary relative text-4xl tracking-[-1.5px] before:absolute before:left-0 before:top-[2px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:text-5xl lg:before:h-[48px] lg:before:w-[48px] xl:text-[64px] xl:before:h-[64px] xl:before:w-[64px]">
               All over my details find here...
             </h3>
           </div>

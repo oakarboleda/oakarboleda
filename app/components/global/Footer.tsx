@@ -8,7 +8,7 @@ import { faPaypal } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
-    <footer className="footer bg-black-800 pb-[60px] pt-[80px] lg:pt-[100px] xl:pt-[120px]">
+    <footer className="footer bg-baltic-sea-950 pb-[60px] pt-[80px] lg:pt-[100px] xl:pt-[120px]">
       <div className="container">
         <div
           className="aos-init aos-animate overflow-x-hidden"
@@ -23,9 +23,7 @@ function Footer() {
                 t’s work together
               </h3>
               <div className="mt-10 flex flex-wrap items-center">
-                <span className="font-Syne text-xl font-bold text-white">
-                  Based in Germany |
-                </span>
+                <span className="font-Syne text-xl font-bold text-white"></span>
                 <div className="ml-5 md:ml-[5px] lg:ml-0 xl:ml-[16px] 2xl:ml-5">
                   <ul className="flex flex-wrap items-center gap-x-4">
                     <li>
@@ -102,11 +100,11 @@ function Footer() {
             </div>
             <div className="border-border-white group flex flex-col justify-between rounded-2xl border px-7 py-9">
               <h3 className="font-Syne text-xl font-bold text-white">
-                Looking for a hectic designer?
+                Looking for ?
               </h3>
               <div className="flex items-center justify-between">
                 <p className="text-orange font-Syne text-2xl font-bold leading-none ">
-                  hello@henry.com
+                  hello@oakarboleda.com
                 </p>
                 <a
                   href="#"
@@ -139,14 +137,14 @@ function Footer() {
             </div>
             <div className="border-border-white group flex flex-col justify-between rounded-2xl border px-7 py-9">
               <h3 className="font-Syne text-xl font-bold text-white">
-                Want a more in-depth look at my history?
+                Want to support my work?
               </h3>
               <div className="flex items-center justify-between">
                 <p className="text-orange font-Syne text-2xl font-bold leading-none">
-                  +598 6879 9874
+                  Buy Me A Coffee
                 </p>
-                <a
-                  href="#"
+                <Link
+                  href="https://www.buymeacoffee.com/oakarboleda"
                   className="group-hover:animate-arrow-move-up group-hover:text-orange text-white"
                 >
                   <svg
@@ -171,7 +169,7 @@ function Footer() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

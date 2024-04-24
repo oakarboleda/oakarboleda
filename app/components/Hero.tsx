@@ -54,7 +54,6 @@ export function Hero() {
           <Model />
         </Suspense>
         <OrbitControls
-          autoRotate
           autoRotateSpeed={1}
           enablePan={false}
           enableZoom={false}

@@ -4,6 +4,7 @@ import projects from '@/app/types/projects';
 import ProjectCard from '@/app/projects/ProjectCard';
 import Title from '@/app/components/global/Title';
 import { syne } from '../components/fonts';
+import { Button } from '../components/global/button';
 
 function Projects() {
   return (
@@ -22,9 +23,9 @@ function Projects() {
         </div>
         <div className="relative mt-2 w-full pb-20">
           <Link href="/projects">
-            <div className="mx-auto mt-8 w-full max-w-sm cursor-pointer whitespace-nowrap rounded-full border bg-ripe-plum-900 px-8 py-3 text-center transition-colors hover:text-white md:max-w-2xl">
+            <Button className="mx-auto mt-8 w-full max-w-sm cursor-pointer whitespace-nowrap  px-8 py-3 text-center transition-colors md:max-w-2xl">
               View All
-            </div>
+            </Button>
           </Link>
         </div>
       </div>
