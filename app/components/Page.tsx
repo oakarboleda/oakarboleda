@@ -1,9 +1,7 @@
 import Footer from '@/app/components/global/Footer';
 import Head from 'next/head';
-import MobileNavbar from '@/app/components/global/MobileNavbar';
-import NavBar from '@/app/components/global/NavBar';
+
 import React from 'react';
-import { GoogleAnalytics } from 'nextjs-google-analytics';
 
 interface props {
   currentPage: string;
@@ -66,12 +64,6 @@ function Page({
           property="twitter:image"
           content="https://oakarboleda.io/static/misc/og.png"
         ></meta>
-
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
       </Head>
       <main>
         <div className="sky">

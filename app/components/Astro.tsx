@@ -1,5 +1,6 @@
 import * as React from 'react';
-const Astronaut = (props) => (
+
+const Astronaut = ({ ...props }) => (
   <svg
     id="Layer_2"
     data-name="Layer 2"
