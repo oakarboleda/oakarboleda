@@ -1,4 +1,5 @@
 import React from 'react';
+import { duruSans, oranienbaum, syne } from '../components/fonts';
 
 type TabContentProps = {
   activeTabIndex: number;
@@ -16,7 +17,7 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
               </h4>
               <p className="paragraph mb-7">
                 Oak Arboleda,{' '}
-                <span className="text-black-800">Software Engineer</span>, based
+                <span className="text-slate-50">Software Engineer</span>, based
                 in Minneapolis, Minnesota.
               </p>
               <p className="paragraph mb-14">
@@ -64,20 +65,26 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
       case 1:
         return (
           <div id="2" className="tab-content relative">
-            <h4 className="text-black-800 mb-6 font-Syne text-2xl font-bold lg:text-[32px]">
+            <h4 className="mb-6 text-2xl font-bold text-slate-50 lg:text-[32px]">
               Experience
             </h4>
 
             <div className="grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2">
-              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl bg-baltic-sea-500 px-7 pb-7 pt-[30px] transition-all hover:bg-ripe-plum-400 hover:shadow-2xl">
-                <span className="font-Inter text-black-text-800 text-sm font-normal leading-tight">
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-solid border-slate-50 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
+                <span
+                  className={`${syne.className} text-sm font-normal leading-tight`}
+                >
                   08/08 – Present
                 </span>
                 <div>
-                  <p className="text-black-800 before:bg-orange relative z-[1] pl-4 font-sans text-lg font-normal leading-7 before:absolute before:left-0 before:top-[50%] before:-z-[1] before:block before:h-[8px] before:w-[8px] before:translate-y-[-50%] before:rounded-full">
+                  <p
+                    className={`${syne.className} relative z-[1] pl-4 text-lg font-normal leading-7 before:absolute before:left-0 before:top-[50%] before:-z-[1] before:block before:h-[8px] before:w-[8px] before:translate-y-[-50%] before:rounded-full`}
+                  >
                     Shared Creatives Collective
                   </p>
-                  <h4 className="text-black-800 font-Syne text-2xl font-bold leading-normal">
+                  <h4
+                    className={`${syne.className} mb-2 text-xl font-bold leading-normal`}
+                  >
                     Software Engineer
                   </h4>
                 </div>
@@ -135,16 +142,17 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
             </h4>
 
             <div className="grid grid-cols-1 gap-6">
-              <div className="bg-black-500 flex flex-wrap gap-[30px] rounded-2xl px-7 pb-7 pt-[30px] transition-all hover:bg-white hover:shadow-2xl md:gap-[60px] lg:gap-[104px]">
+              <div className="border-solid-slate-300 flex flex-wrap gap-[30px] rounded-2xl border-2 px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl md:gap-[60px] lg:gap-[104px]">
                 <span className="font-Inter text-black-text-800 text-sm font-normal leading-tight">
-                  003/2008 – 07/2011
+                  10/2010 – 07/2014
                 </span>
                 <div className="flex-1">
                   <p className="text-black-800 before:bg-orange relative z-[1] pl-4 font-sans text-lg font-normal leading-7 before:absolute before:left-0 before:top-[50%] before:-z-[1] before:block before:h-[8px] before:w-[8px] before:translate-y-[-50%] before:rounded-full">
-                    Axtra
+                    The Art Insititues International of Minnesota
                   </p>
                   <h4 className="text-black-800 font-Syne text-2xl font-bold leading-normal">
-                    BA Business Management
+                    Bacholers of Science in Software Development & Interactive
+                    Media
                   </h4>
                 </div>
               </div>
@@ -159,7 +167,7 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
             </h4>
 
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
-              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl bg-baltic-sea-500 px-7 pb-7 pt-[30px] transition-all hover:bg-ripe-plum-400 hover:shadow-2xl">
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-slate-300 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
                 <div className="flex flex-1 flex-col flex-wrap gap-1">
                   <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
                     React JS
@@ -179,7 +187,7 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
                 </div>
               </div>
 
-              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl bg-baltic-sea-500 px-7 pb-7 pt-[30px] transition-all hover:bg-ripe-plum-400 hover:shadow-2xl">
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-slate-300 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
                 <div className="flex flex-1 flex-col flex-wrap gap-1">
                   <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
                     Framer
@@ -188,9 +196,17 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
                     (80%)
                   </p>
                 </div>
+                <div className="flex flex-1 flex-col flex-wrap gap-1">
+                  <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
+                    Figma
+                  </h4>
+                  <p className="font-Inter text-black-800 text-sm font-normal leading-none">
+                    (70%)
+                  </p>
+                </div>
               </div>
 
-              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl bg-baltic-sea-500 px-7 pb-7 pt-[30px] transition-all hover:bg-ripe-plum-400 hover:shadow-2xl">
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-slate-300 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
                 <div className="flex flex-1 flex-col flex-wrap gap-1">
                   <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
                     Framer
@@ -199,9 +215,17 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
                     (80%)
                   </p>
                 </div>
+                <div className="flex flex-1 flex-col flex-wrap gap-1">
+                  <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
+                    Figma
+                  </h4>
+                  <p className="font-Inter text-black-800 text-sm font-normal leading-none">
+                    (70%)
+                  </p>
+                </div>
               </div>
 
-              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl bg-baltic-sea-500 px-7 pb-7 pt-[30px] transition-all hover:bg-ripe-plum-400 hover:shadow-2xl">
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-slate-300 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
                 <div className="flex flex-1 flex-col flex-wrap gap-1">
                   <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
                     Framer
@@ -210,15 +234,49 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
                     (80%)
                   </p>
                 </div>
+                <div className="flex flex-1 flex-col flex-wrap gap-1">
+                  <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
+                    Figma
+                  </h4>
+                  <p className="font-Inter text-black-800 text-sm font-normal leading-none">
+                    (70%)
+                  </p>
+                </div>
               </div>
 
-              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl bg-baltic-sea-500 px-7 pb-7 pt-[30px] transition-all hover:bg-ripe-plum-400 hover:shadow-2xl">
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-slate-300 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
                 <div className="flex flex-1 flex-col flex-wrap gap-1">
                   <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
                     Framer
                   </h4>
                   <p className="font-Inter text-black-800 text-sm font-normal leading-none">
                     (80%)
+                  </p>
+                </div>
+                <div className="flex flex-1 flex-col flex-wrap gap-1">
+                  <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
+                    Figma
+                  </h4>
+                  <p className="font-Inter text-black-800 text-sm font-normal leading-none">
+                    (70%)
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-slate-300 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl">
+                <div className="flex flex-1 flex-col flex-wrap gap-1">
+                  <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
+                    Framer
+                  </h4>
+                  <p className="font-Inter text-black-800 text-sm font-normal leading-none">
+                    (80%)
+                  </p>
+                </div>
+                <div className="flex flex-1 flex-col flex-wrap gap-1">
+                  <h4 className="text-black-800 font-Syne text-xl font-bold leading-normal">
+                    Figma
+                  </h4>
+                  <p className="font-Inter text-black-800 text-sm font-normal leading-none">
+                    (70%)
                   </p>
                 </div>
               </div>

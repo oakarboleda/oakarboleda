@@ -1,4 +1,10 @@
-import { Audiowide, Oranienbaum, Syne, Zen_Dots } from 'next/font/google';
+import {
+  Audiowide,
+  Duru_Sans,
+  Oranienbaum,
+  Syne,
+  Zen_Dots,
+} from 'next/font/google';
 
 export const syne = Syne({
   display: 'swap',
@@ -22,6 +28,13 @@ export const audiowide = Audiowide({
 });
 
 export const zenDots = Zen_Dots({
+  display: 'swap',
+  subsets: ['latin'],
+  style: ['normal'],
+  weight: ['400'],
+});
+
+export const duruSans = Duru_Sans({
   display: 'swap',
   subsets: ['latin'],
   style: ['normal'],
