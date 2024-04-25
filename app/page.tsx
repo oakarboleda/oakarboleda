@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import '@/app/styles/global.css';
+import '@/app/styles/custom.scss';
 import Page from '@/app/components/Page';
 import { Hero } from '@/app/components/Hero';
 import About from '@/app/about/page';

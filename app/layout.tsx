@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import type { Metadata } from 'next';
-import '@/app/styles/global.css';
 import '@/app/styles/custom.scss';
 
 // importing aos
