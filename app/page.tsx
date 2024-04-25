@@ -9,7 +9,6 @@ import Skills from './skills/Skills';
 import CTA from './components/CTA';
 import Ufo from './components/UFO';
 import Projects from '@/app/projects/projects';
-import Divider from './components/global/divider';
 import Blog from './blog/page';
 
 export default function Home() {
@@ -43,6 +42,7 @@ export default function Home() {
       <section className="relative w-full bg-slate-300 lg:py-20">
         <Contact />
       </section>
+
       {/* <section className="relative w-full lg:py-10">
         <Ufo />
       </section> */}

@@ -7,16 +7,17 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   href?: string;
   ref?: (el: any) => any;
+  onClick?: () => void;
 }
 
-export function Button({ children, className, ref }: ButtonProps) {
+export function Button({ children, className, ref, onClick }: ButtonProps) {
   const classes = clsx(
-    'flex h-10 items-center rounded-lg bg-ripe-plum-900 px-4 text-sm font-medium text-white transition-colors hover:bg-ripe-plum-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:bg-blue-600 aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
+    'button polygon-btn flex h-10 items-center text-sm text-white transition-colors  focus-visible:outline  f aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
     className,
   );
 
   return (
-    <button ref={ref} className={classes}>
+    <button ref={ref} className={classes} onClick={onClick}>
       {children}
     </button>
   );

@@ -12,8 +12,10 @@ function CTA() {
               className="aos-init aos-animate flex max-w-[325px] flex-col flex-wrap gap-y-2 font-bold leading-none lg:max-w-[400px] xl:max-w-[527px]"
               data-aos="fade-up"
             >
-              <span className="font-xl text-orange-600">Pricing</span>
-              <h3 className="text-4xl tracking-[-1.5px] lg:text-5xl xl:text-[64px]">
+              <span className="font-xl text-ripe-plum-400">Pricing</span>
+              <h3
+                className={`${syne.className} text-4xl tracking-[-1.5px] lg:text-5xl xl:text-[64px]`}
+              >
                 Stay chill and pick your{' '}
                 <span className="before:bg-primary relative z-[1] before:absolute before:left-[-4px] before:top-[13px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:before:h-[48px] lg:before:w-[48px] xl:before:h-[64px] xl:before:w-[64px]">
                   pl
@@ -26,10 +28,7 @@ function CTA() {
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              <Button
-                href={'/contact'}
-                className="btn-primary group flex flex-wrap items-center"
-              >
+              <Button href={'/contact'}>
                 Contact for Custom Project
                 <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
                   <svg
@@ -65,7 +64,7 @@ function CTA() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {/* Pricing Item Start */}
         <div
-          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl p-6 transition-all hover:bg-white hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-500	 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={300}
         >
@@ -124,7 +123,7 @@ function CTA() {
         {/* Pricing Item End */}
         {/* Pricing Item Start */}
         <div
-          className="bg-black-500 aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl p-6 transition-all hover:bg-white hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-500	 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={500}
         >
@@ -183,7 +182,7 @@ function CTA() {
         {/* Pricing Item End */}
         {/* Pricing Item Start */}
         <div
-          className="bg-black-500 aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl p-6 transition-all hover:bg-white hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-500	 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={700}
         >

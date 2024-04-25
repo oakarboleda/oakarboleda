@@ -13,7 +13,7 @@ $numShootingStars: 10;
 
 $width: 100%;
 
-button {
+.button {
   --border-width: 4px;
   --corner-value: 20px;
   --cropped-corner: polygon(100% 0, 100% calc(100% - var(--corner-value)), calc(100% - var(--corner-value)) 100%, 0 100%, 0 0);
@@ -33,10 +33,7 @@ button {
   min-width: 15rem;
   transition: all .18s ease-out;
   letter-spacing: 2px;
-  
-  // animation-iteration-count: 1;
-  // animation-duration: 0.7s;
-  // animation-fill-mode: forwards;
+
   
   &:after {
     position: absolute;
@@ -50,17 +47,7 @@ button {
     transform: rotate(45deg) translateX(0%)
   }
   
-  // &:after {
-  //   position: absolute;
-  //   content: '';
-  //   display: block;
-  //   width: 0;
-  //   height: 0;
-  //   border-right: 19px solid #FFFFFF;
-  //   border-top: 20px solid transparent;
-  //   border-bottom: 20px solid transparent;
-  //   right: 0;
-  // }
+  
   
   &:hover {
     color: #060606;
@@ -68,7 +55,7 @@ button {
     letter-spacing: 1px;
     
     
-    // animation-name: blinking-btn;
+    
   }
 }
 
@@ -162,4 +149,16 @@ body {
     opacity: 1;
     height: 800px;
   }
+}
+
+@keyframes waving {
+	0% {
+		transform: scale(-1, -1) rotate(40deg);
+	}
+	50% {
+		transform: scale(-1, -1) rotate(55deg);
+	}
+	100% {
+		transform: scale(-1, -1) rotate(40deg);
+	}
 }
