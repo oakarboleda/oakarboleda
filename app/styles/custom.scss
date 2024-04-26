@@ -2,16 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-$starFieldWidth: 2560;
-$starFieldHeight: 2560;
+$starFieldWidth: 3200;
+$starFieldHeight: 3200;
 $starStartOffset: 600px;
 
 $starOneScrollDuration: 100s;
 $starTwoScrollDuration: 125s;
 $starThreeScrollDuration: 175s;
 
-$numStarOneStars: 1700;
-$numStarTwoStars: 700;
+$numStarOneStars: 700;
+$numStarTwoStars: 500;
 $numStarThreeStars: 200;
 $numShootingStars: 10;
 
@@ -62,15 +62,14 @@ $width: 100%;
   }
 }
 
-body {
-  height: 100%;
-  display: block;
-  position: relative;
-  width: 100%;
 
-
+.sky {
+  background: -webkit-linear-gradient(0deg, #a0c4ff -45%, #523969 15%, #0a0023 88%); /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(0deg, #a0c4ff -45%, #523969 15%, #0a0023 88%); /* FF3.6+ */
+  background: -ms-linear-gradient(0deg, #a0c4ff -45%, #523969 15%, #0a0023 88%); /* IE10 */
+  background: -o-linear-gradient(0deg, #a0c4ff -45%, #523969 15%, #0a0023 88%); /* Opera 11.10+ */
+  background: linear-gradient(0deg, #a0c4ff -45%, #523969 15%, #0a0023 88%); /* W3C */
 }
-
 
 @function create-stars($n) {
   $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
