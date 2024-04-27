@@ -30,15 +30,15 @@ export default function Home() {
       <section className="bg-transparent py-[80px] lg:py-[100px]">
         <About />
       </section>
-      <section className="bg-baltic-sea-950 pb-4">
-        <Projects />
-      </section>
-      <section className="py-[120px]">
-        <CTA />
-      </section>
-      <section className="bg-slate-200 py-[120px]">
-        <Blog />
-      </section>
+      {/*<section className="bg-baltic-sea-950 pb-4">*/}
+      {/*  <Projects />*/}
+      {/*</section>*/}
+      {/*<section className="py-[120px]">*/}
+      {/*  <CTA />*/}
+      {/*</section>*/}
+      {/*<section className="bg-slate-200 py-[120px]">*/}
+      {/*  <Blog />*/}
+      {/*</section>*/}
       <section className="relative w-full bg-slate-300 lg:py-20">
         <Contact />
       </section>
