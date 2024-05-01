@@ -45,7 +45,7 @@ export default function Contact() {
                   </p>
                   <input
                     placeholder="123@ex.com"
-                    type="text"
+                    type="email"
                     className="mb-0 ml-0 mr-0
                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
                   focus:border-black focus:outline-none"
@@ -60,7 +60,7 @@ export default function Contact() {
                   </p>
                   <input
                     placeholder="Message"
-                    type="message"
+                    type="textarea"
                     className="mb-0 ml-0 mr-0
                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
                   focus:border-black focus:outline-none"

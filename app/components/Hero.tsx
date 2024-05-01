@@ -30,6 +30,7 @@ export function Hero() {
           position={[0, 10, 16]}
           fov={95}
         ></PerspectiveCamera>
+
         <Lights />
         <Suspense fallback={null}>
           <Model />

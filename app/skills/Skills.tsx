@@ -104,19 +104,19 @@ function Skills() {
                               className="transition-all"
                               d="M7 17L17 7"
                               stroke="currentColor"
-                              stroke-opacity="0.6"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeOpacity="0.6"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             ></path>
                             <path
                               className="transition-all"
                               d="M7 7H17V17"
                               stroke="currentColor"
-                              stroke-opacity="0.6"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeOpacity="0.6"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             ></path>
                           </svg>
                         </span>
