@@ -16,6 +16,18 @@ $numStarThreeStars: 200;
 $numShootingStars: 10;
 
 $width: 100%;
+.heading {
+  top: 0;
+  padding: 2rem;
+  font-size: 15rem;
+  font-weight: bolder;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  text-shadow: 1px 1px black;
+  z-index: 4;
+
+}
 
 .button {
   --border-width: 4px;
@@ -1113,4 +1125,43 @@ canvas {
   .container {
     max-width: 1920px;
   }
+}
+
+.hacking-animation {
+  background: #000;
+  height: 100%;
+
+  &__text {
+    bottom: 0;
+    font-family: monospace;
+    font-size: 18px;
+    left: 0;
+    line-height: 1.5rem;
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+  }
+
+  &__character {
+    animation: type 500ms linear;
+    color: #00a000;
+  }
+}
+
+@keyframes type {
+  0% {
+    background: #FFF;
+    color: #FFF;
+  }
+
+  5% {
+    background: transparent;
+    color: #FFF;
+  }
+
+  100% {
+    background: transparent;
+    color: #00a000;
+  }
+
 }

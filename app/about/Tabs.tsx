@@ -24,7 +24,7 @@ export function Tabs({
             return (
               <Button
                 key={id}
-                className={`aria-disabled:opacity-50' flex h-10 items-center  px-4 text-sm font-medium transition-colors hover:bg-ripe-plum-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 aria-disabled:cursor-not-allowed
+                className={`aria-disabled:opacity-50' flex h-10 items-center  px-4 text-sm font-medium transition-colors  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 aria-disabled:cursor-not-allowed
  ${
    activeTabIndex === id ? 'active' : ''
  } group inline-flex items-center justify-between`}
@@ -64,7 +64,6 @@ export function Tabs({
             );
           })}
         </div>
-        {/* Rest of the code */}
       </div>
     </div>
   );

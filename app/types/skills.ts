@@ -8,25 +8,15 @@ const services: Service[] = [
   },
   {
     title: 'UI/UX Design',
-    type: '',
   },
   {
-    title: 'Javascript',
+    title: 'E-commerce Development',
   },
   {
-    title: 'Sass',
+    title: 'Web Development',
   },
   {
-    title: 'TailwindCSS',
-  },
-  {
-    title: 'React',
-  },
-  {
-    title: 'NextJS',
-  },
-  {
-    title: 'Typescript',
+    title: '',
   },
 ];
 
