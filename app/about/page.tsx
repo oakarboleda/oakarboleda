@@ -55,7 +55,6 @@ function About() {
         </div>
         {/* Rest of the code */}
       </div>
-
       <span className="-mr-2 mt-11 flex justify-end">
         <svg
           width={54}

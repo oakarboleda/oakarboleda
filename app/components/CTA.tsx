@@ -16,11 +16,8 @@ function CTA() {
               <h3
                 className={`${syne.className} text-4xl tracking-[-1.5px] lg:text-5xl xl:text-[64px]`}
               >
-                Stay chill and pick your{' '}
-                <span className="before:bg-primary relative z-[1] before:absolute before:left-[-4px] before:top-[13px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:before:h-[48px] lg:before:w-[48px] xl:before:h-[64px] xl:before:w-[64px]">
-                  pl
-                </span>
-                an
+                Need a Freelancer?{' '}
+                <span className="before:bg-primary relative z-[1] before:absolute before:left-[-4px] before:top-[13px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:before:h-[48px] lg:before:w-[48px] xl:before:h-[64px] xl:before:w-[64px]"></span>
               </h3>
             </div>
             <div
@@ -64,7 +61,7 @@ function CTA() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {/* Pricing Item Start */}
         <div
-          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-500	 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-50 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={300}
         >
@@ -123,7 +120,7 @@ function CTA() {
         {/* Pricing Item End */}
         {/* Pricing Item Start */}
         <div
-          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-500	 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-50 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={500}
         >
@@ -182,7 +179,7 @@ function CTA() {
         {/* Pricing Item End */}
         {/* Pricing Item Start */}
         <div
-          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-500	 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
+          className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-50 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
           data-aos-delay={700}
         >

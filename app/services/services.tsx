@@ -17,19 +17,19 @@ function Services() {
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 xl:col-span-8">
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {services.map((item, index) => {
+            {services.map((item) => {
               return (
                 <>
-                  <div
-                    key={index}
-                    className="aos-init aos-animate group rounded-lg bg-slate-400 px-6 py-7 transition-all hover:bg-white hover:shadow-2xl"
+                  <li
+                    key={item.id}
+                    className="aos-animate aos-init flex flex-col flex-wrap justify-between gap-8 rounded-2xl border-2 border-solid border-baltic-sea-50 bg-transparent px-7 pb-7 pt-[30px] transition-all hover:bg-slate-950 hover:shadow-2xl"
                     data-aos="fade-up"
                     data-aos-delay="200"
                   >
                     <h4>
                       <a
                         href="/projects"
-                        className="lex group-hover:text-orange flex-wrap items-end justify-between font-Syne text-xl font-bold text-white transition-all"
+                        className="lex  flex-wrap items-end justify-between font-Syne text-xl font-bold text-white transition-all"
                       >
                         {item.title}
                         <span className="group-hover:animate-arrow-move-up">
@@ -62,7 +62,7 @@ function Services() {
                         </span>
                       </a>
                     </h4>
-                  </div>
+                  </li>
                 </>
               );
             })}

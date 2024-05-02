@@ -157,14 +157,14 @@ function Lights() {
       />
       <directionalLight
         ref={directionalRef}
-        color={'#fffff'}
-        position={[0, 10, 0]}
+        color={'#ffffff'}
+        position={[20.01, 2.36, 2.36]}
       />
       <hemisphereLight
         ref={hemisphereRef}
         castShadow={true}
         visible={true}
-        skyColor="#efde46" // Add your desired sky color here
+        color="#efde46" // Add your desired sky color here
         groundColor="#000000"
         position={[0, 10, 0]}
       />

@@ -8,10 +8,13 @@ import {
   PerspectiveCamera,
   Stars,
   Text3D,
-  Text,
 } from '@react-three/drei';
 import { Model } from '@/app/components/Hero/Model';
 import Lights from '@/app/components/Hero/Lights';
+
+interface props {
+  children: React.ReactNode;
+}
 
 const Particle = () => {
   const ref = useRef({} as Group);
@@ -28,11 +31,30 @@ const Particle = () => {
 };
 
 export function Hero() {
+  const canvasRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleResize = () => {
+      if (canvasRef.current) {
+        canvasRef.current.style.width = `${window.innerWidth}px`;
+        canvasRef.current.style.height = `${window.innerHeight}px`;
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Call the function initially to set the size
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       {/* Here we will put a cool terminal component*/}
 
-      <Canvas dpr={[1.5, 2]} linear shadows>
+      <Canvas dpr={[1.5, 2]} linear style={{ width: '100%', height: '100%' }}>
         <Text3D
           position={[-40, 15, -50]}
           bevelSegments={2} // Adjust the z value here

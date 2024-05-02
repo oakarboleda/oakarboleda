@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
-import { footer } from '@/app/types/global';
+import UFO from '@/app/components/UFO';
 
 function Footer() {
   return (
@@ -29,7 +28,7 @@ function Footer() {
                 Looking for ?
               </h3>
               <div className="flex items-center justify-between">
-                <p className="font-Syne text-2xl font-bold leading-none text-white ">
+                <p className="font-Syne text-2xl font-bold leading-none text-white">
                   hello@oakarboleda.com
                 </p>
                 <a
@@ -100,7 +99,9 @@ function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6">
-            <div className="py-[72px]"></div>
+            <div className="z-40 py-[220px]">
+              <UFO />
+            </div>
           </div>
           <div className="border-border-white border-t pt-6 ">
             <div className="grid grid-cols-12">

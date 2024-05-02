@@ -2,6 +2,7 @@ import Footer from '@/app/components/global/Footer';
 import Head from 'next/head';
 
 import React from 'react';
+import Header from '@/app/components/global/NavBar';
 
 interface props {
   currentPage: string;
@@ -67,6 +68,7 @@ function Page({
       </Head>
       <main>
         <div className="sky">
+          <Header />
           <div className="stars"></div>
           <div className="stars1"></div>
           <div className="stars2"></div>

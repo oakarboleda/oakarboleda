@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 interface BlogItemProps {
   image: string;
   category: string;
@@ -43,7 +44,7 @@ const BlogItem: React.FC<BlogItemProps> = ({
             </a>
           </li>
         </ul>
-        <div className="text-black-800 hover:text-orange group flex items-end justify-between">
+        <div className=" hover:text-orange group flex items-end justify-between">
           <h4 className="font-Syne text-[18px] font-bold leading-8 transition-all md:text-[20px] 2xl:text-[22px]">
             <a href={link}>{title}</a>
           </h4>

@@ -15,9 +15,6 @@ import {
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
-function classNames(classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
 
 const links = [
   { name: 'Home', href: '/home', icon: faHouse },

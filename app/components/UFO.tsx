@@ -2,7 +2,12 @@ import React from 'react';
 
 function Ufo() {
   return (
-    <div className="spaceship">
+    <div
+      className="spaceship"
+      style={{
+        overflow: 'hidden',
+      }}
+    >
       <div id="star1"></div>
       <div id="star2"></div>
       <div id="star3"></div>
@@ -39,4 +44,5 @@ function Ufo() {
     </div>
   );
 }
+
 export default Ufo;
