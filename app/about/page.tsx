@@ -1,75 +1,109 @@
-'use client';
-
-import React, { useState } from 'react';
-import { Tabs } from '@/app/about/Tabs';
-import TabContent from '@/app/about/content';
-import { syne } from '@/app/components/fonts';
+import { Button } from '@/app/components/global/button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faGithub,
+  faLinkedinIn,
+  faBehance,
+} from '@fortawesome/free-brands-svg-icons';
 
 function About() {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
-
   return (
-    <div className="container text-slate-50">
-      <span className="-mr-3 mt-14 flex justify-start">
-        <svg
-          width={54}
-          height={54}
-          viewBox="0 0 54 54"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M27.5625 0C27.5625 23.1273 9.1875 28.5455 0 27.8182C16.875 31.0909 25.3125 34.3636 27 54C27 40.3636 34.875 30.5455 54 27.8182C46.125 28.3636 29.8125 24 27.5625 0Z"
-            fill="#FFB646"
-          />
-        </svg>
-      </span>
-      <div className="grid grid-cols-12 lg:gap-[60px] xl:gap-[100px] 2xl:gap-[134px]">
-        <div
-          className="aos-init aos-animate col-span-12 lg:col-span-5 2xl:col-span-4"
-          data-aos="fade-up"
-        >
-          <div
-            className={`${syne.className} mb-4 flex flex-col flex-wrap gap-y-2 font-bold leading-none`}
-          >
-            <span className="text-xl">Resume</span>
-            <h3 className="before:bg-primary relative text-4xl tracking-[-1.5px] before:absolute before:left-0 before:top-[2px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:text-5xl lg:before:h-[48px] lg:before:w-[48px] xl:text-[64px] xl:before:h-[64px] xl:before:w-[64px]">
-              All over my details find here...
+    <>
+      <div className="container">
+        <div className="grid grid-cols-1 gap-[60px] lg:grid-cols-2 xl:gap-[134px]">
+          <div className="relative">
+            <img width={350} src="/oak.png" alt="" />
+
+            <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap md:right-[170px] lg:right-[-30px]">
+              <span className=" relative inline-block text-[65px] font-bold leading-none text-white before:absolute before:left-[-13px] before:top-[50%] before:-z-[1] before:block before:h-[95px] before:w-[95px] before:translate-y-[-50%] before:rounded-full lg:before:h-[100px] lg:before:w-[100px] xl:text-[80px] xl:before:h-[110px] xl:before:w-[110px]">
+                10+
+              </span>
+              <span className="stroke shadow">
+                <p className="outline-text">Years of experience</p>
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col flex-wrap gap-y-2 font-Syne font-bold leading-none">
+            <span className="text-xl text-ripe-plum-600">Hello I’m</span>
+            <h3 className="before:bg-primary relative text-4xl tracking-[-1.5px] text-white before:absolute before:left-0 before:top-[2px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:text-5xl lg:before:h-[48px] lg:before:w-[48px] xl:text-[64px] xl:before:h-[64px] xl:before:w-[64px]">
+              Oak Arboleda, Software Engineer
             </h3>
-          </div>
-          <div className="tabs my-8 flex flex-wrap gap-2 lg:my-0 lg:flex-col">
-            <Tabs
-              activeTabIndex={activeTabIndex}
-              setActiveTabIndex={setActiveTabIndex}
-            />
+
+            <h4 className="mb-4 mt-3 text-2xl text-white lg:text-3xl xl:text-[44px]">
+              Based in USA
+            </h4>
+            <br />
+            <p className="paragraph mb-6">
+              I am a seasoned software developer with a decades of hands-on
+              experience in the ever-evolving world of software engineering. My
+              passion lies in crafting exceptional applications, and I
+              specialize in harnessing its power to deliver cross-platform
+              solutions that blend efficiency with user-centric design.
+            </p>
+            <ul className="mb-7 flex flex-wrap gap-9 2xl:gap-[40px]">
+              <li>
+                <span className="before:bg-black-300 relative font-Syne text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
+                  <a href="">
+                    {' '}
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </span>
+                <p className="paragraph"></p>
+              </li>
+              <li>
+                <span className="before:bg-black-300 relative font-Syne text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
+                  <a href="">
+                    {' '}
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
+                </span>
+                <p className="paragraph"></p>
+              </li>
+              <li>
+                <span className="before:bg-black-300 relative font-Syne text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
+                  <a href="">
+                    <FontAwesomeIcon icon={faBehance} />
+                  </a>
+                </span>
+                <p className="paragraph"></p>
+              </li>
+            </ul>
+
+            <div className="flex flex-wrap">
+              <a className="button polygon-btn text-white" href={'/'}>
+                Download my resume
+                <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 17L17 7"
+                      stroke="currentColor"
+                      strokeOpacity="0.9"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M7 7H17V17"
+                      stroke="currentColor"
+                      strokeOpacity="0.9"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-        <div
-          className="aos-init aos-animate col-span-12 lg:col-span-7 2xl:col-span-8"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <div className="tab-content active relative">
-            <TabContent activeTabIndex={activeTabIndex} />
-          </div>
-        </div>
-        {/* Rest of the code */}
       </div>
-      <span className="-mr-2 mt-11 flex justify-end">
-        <svg
-          width={54}
-          height={54}
-          viewBox="0 0 54 54"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M27.5625 0C27.5625 23.1273 9.1875 28.5455 0 27.8182C16.875 31.0909 25.3125 34.3636 27 54C27 40.3636 34.875 30.5455 54 27.8182C46.125 28.3636 29.8125 24 27.5625 0Z"
-            fill="#FFB646"
-          />
-        </svg>
-      </span>
-    </div>
+    </>
   );
 }
 

@@ -14,8 +14,22 @@ $numStarOneStars: 700;
 $numStarTwoStars: 500;
 $numStarThreeStars: 200;
 $numShootingStars: 10;
-
+$stroke: #111827;
+$shadow: #db2777;
+$halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==");
 $width: 100%;
+.font-Inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-Syne {
+  font-family: "Syne", sans-serif;
+}
+
+.font-sans {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .heading {
   top: 0;
   padding: 2rem;
@@ -30,6 +44,7 @@ $width: 100%;
 }
 
 .button {
+  color: white;
   --border-width: 4px;
   --corner-value: 20px;
   --cropped-corner: polygon(100% 0, 100% calc(100% - var(--corner-value)), calc(100% - var(--corner-value)) 100%, 0 100%, 0 0);
@@ -74,17 +89,86 @@ $width: 100%;
   }
 }
 
+.outline-text {
+  /* outline */
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+
+  /* fallback */
+  color: whitesmoke;
+
+  /* for demo purpose */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  text-align: center;
+}
+
 .paragraph {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: white;
+}
+
+.text-2xl {
   font-size: 1.5rem;
-  padding: 2rem;
-  text-align: left;
-  z-index: 4;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .sky {
 
   background-color: #3f0c58;
-  background-image: linear-gradient(171deg, #3f0c58 0%, #171720 43%, #171720 78%, #070710 100%);
+  background-image: linear-gradient(171deg, #3f0c5840 0%, #171720 33%, #171720 78%, #070710 100%);
 }
 
 @function create-stars($n) {
@@ -1263,3 +1347,5 @@ canvas {
     transform: rotate(-45deg) translate(6px, -6px);
   }
 }
+
+

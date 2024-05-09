@@ -67,14 +67,8 @@ function Page({
         ></meta>
       </Head>
       <main>
-        <div className="sky">
-          <Header />
-          <div className="stars"></div>
-          <div className="stars1"></div>
-          <div className="stars2"></div>
-          <div className="shooting-stars"></div>
-          {children}
-        </div>
+        <Header />
+        {children}
       </main>
       <Footer />
     </>

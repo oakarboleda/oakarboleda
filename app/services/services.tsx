@@ -28,7 +28,7 @@ function Services() {
                   >
                     <h4>
                       <a
-                        href="/projects"
+                        href="/portfolio"
                         className="lex  flex-wrap items-end justify-between font-Syne text-xl font-bold text-white transition-all"
                       >
                         {item.title}

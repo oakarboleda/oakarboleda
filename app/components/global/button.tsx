@@ -12,7 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ children, className, onClick }: ButtonProps) {
   const classes = clsx(
-    'button polygon-btn flex h-10 items-center text-sm text-white transition-colors  focus-visible:outline  f aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
+    'polygon-btn button flex h-10 items-center text-sm text-white transition-colors focus-visible:outline aria-disabled:cursor-not-allowed aria-disabled:opacity-50',
     className,
   );
 

@@ -10,17 +10,17 @@ export default function Contact() {
       lg:flex-row xl:px-5"
       >
         <div className="flex w-full flex-col items-center pb-20 pl-10 pr-10 pt-5 lg:flex-row lg:pt-20">
-          <div className="relative w-full max-w-md bg-cover lg:w-7/12 lg:max-w-2xl">
+          <div className="relative w-full max-w-md bg-cover px-3 lg:w-7/12 lg:max-w-2xl">
             <div className="relative flex h-full w-full flex-col items-center justify-center lg:pr-10">
               <Astronaut />
             </div>
           </div>
-          <div className="relative z-10 mb-0 ml-0 mr-0 mt-20 w-full max-w-2xl lg:mt-0 lg:w-5/12">
+          <div className="relative z-10 mb-0 ml-0 mr-0 mt-20 w-full max-w-2xl px-3 lg:mt-0 lg:w-5/12">
             <div
               className="relative z-10 flex flex-col items-start justify-start rounded-xl bg-white pb-10 pl-10 pr-10
             pt-10 shadow-2xl"
             >
-              <p className="w-full text-center font-serif text-4xl font-medium leading-snug">
+              <p className="w-full text-center text-4xl font-medium leading-snug">
                 Feel Free to Contact me
               </p>
               <div className="relative mb-0 ml-0 mr-0 mt-6 w-full space-y-8">

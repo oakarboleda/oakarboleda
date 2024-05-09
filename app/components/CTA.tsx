@@ -70,17 +70,13 @@ function CTA() {
               Basic
             </span>
             <span className="text-orange font-Syne text-xl font-bold">
-              $30/h
+              $50/h
             </span>
           </div>
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4
-                className={`${syne.className} mb-1 text-[32px] font-bold leading-10`}
-              >
-                20 hrs
-              </h4>
-              <p className=" font-sans text-lg font-normal leading-none">
+              <h4 className="mb-1 text-[32px] font-bold leading-10">10 hrs</h4>
+              <p className="font-sans text-lg font-normal leading-none">
                 10 hours per week
               </p>
             </div>
@@ -129,18 +125,14 @@ function CTA() {
               Premium
             </span>
             <span className="text-orange font-Syne text-xl font-bold">
-              $35/h
+              $60/h
             </span>
           </div>
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4
-                className={`${syne.className} mb-1 text-[32px] font-bold leading-10`}
-              >
-                30 hrs
-              </h4>
+              <h4 className="mb-1 text-[32px] font-bold leading-10">20 hrs</h4>
               <p className="text-black-text-600 font-sans text-lg font-normal leading-none">
-                15 hours per week
+                20 hours per week
               </p>
             </div>
             <a
@@ -181,34 +173,34 @@ function CTA() {
         <div
           className="aos-init aos-animate group flex flex-col flex-wrap gap-10 rounded-2xl border-2 border-solid border-slate-50 p-6 transition-all hover:bg-slate-950 hover:shadow-2xl lg:gap-12 lg:p-8"
           data-aos="fade-up"
-          data-aos-delay={700}
+          data-aos-delay="700"
         >
           <div className="flex items-center justify-between">
-            <span className="font-sans text-lg font-normal leading-none">
+            <span className="text-black-text-600 font-sans text-lg font-normal leading-none">
               Platinum
             </span>
             <span className="text-orange font-Syne text-xl font-bold">
-              $65/h
+              $60/h
             </span>
           </div>
+
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4
-                className={`${syne.className} mb-1 text-[32px] font-bold leading-10`}
-              >
-                20 hrs
+              <h4 className="text-black-800 mb-1 font-Syne text-[32px] font-bold leading-10">
+                40 hrs
               </h4>
               <p className="text-black-text-600 font-sans text-lg font-normal leading-none">
                 40 hours per week
               </p>
             </div>
+
             <a
               href="#"
               className="text-black-text-600 group-hover:text-orange group-hover:animate-arrow-move-up"
             >
               <svg
-                width={24}
-                height={24}
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -217,25 +209,24 @@ function CTA() {
                   className="transition-all"
                   d="M7 17L17 7"
                   stroke="currentColor"
-                  strokeOpacity="0.6"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                  stroke-opacity="0.6"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
                 <path
                   className="transition-all"
                   d="M7 7H17V17"
                   stroke="currentColor"
-                  strokeOpacity="0.6"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                  stroke-opacity="0.6"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
             </a>
           </div>
         </div>
-        {/* Pricing Item End */}
       </div>
     </div>
   );
