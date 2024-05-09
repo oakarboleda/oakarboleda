@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import UFO from '@/app/components/UFO';
+import { router } from 'next/client';
 
 function Footer() {
   return (
@@ -32,7 +33,8 @@ function Footer() {
                   hello@oakarboleda.com
                 </p>
                 <a
-                  href="#"
+                  onClick={() => router.push('mailto:hello@oakarboleda.com')}
+                  href="mailto:oakarboleda@gmail.com"
                   className="group-hover:animate-arrow-move-up group-hover:text-orange text-white"
                 >
                   <svg

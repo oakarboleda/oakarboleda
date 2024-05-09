@@ -1,8 +1,22 @@
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
-import Astronaut from '../components/Astro';
-import { Button } from '@/app/components/global/button';
+'use client';
+import { FC } from 'react';
+import Astronaut from '@/app/components/Astro';
+import { sendEmail } from '@/app/utils/send-email';
+import { useForm } from 'react-hook-form';
 
-export default function Contact() {
+export type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+const Contact: FC = () => {
+  const { register, handleSubmit } = useForm<FormData>();
+
+  function onSubmit(data: FormData) {
+    sendEmail(data);
+  }
+
   return (
     <>
       <div
@@ -23,20 +37,21 @@ export default function Contact() {
               <p className="w-full text-center text-4xl font-medium leading-snug">
                 Feel Free to Contact me
               </p>
-              <div className="relative mb-0 ml-0 mr-0 mt-6 w-full space-y-8">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="relative mb-0 ml-0 mr-0 mt-6 w-full space-y-8 "
+              >
                 <div className="relative">
-                  <p
-                    className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium
-                  text-gray-600"
-                  >
+                  <p className="absolute mb-0 ml-2 mr-0 mt-3 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
                     Name
                   </p>
                   <input
-                    placeholder="John"
+                    placeholder="Full Name"
                     type="text"
                     className="mb-0 ml-0 mr-0
                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
                   focus:border-black focus:outline-none"
+                    {...register('name', { required: true })}
                   />
                 </div>
                 <div className="relative">
@@ -49,6 +64,7 @@ export default function Contact() {
                     className="mb-0 ml-0 mr-0
                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
                   focus:border-black focus:outline-none"
+                    {...register('email', { required: true })}
                   />
                 </div>
                 <div className="relative">
@@ -58,28 +74,25 @@ export default function Contact() {
                   >
                     Message
                   </p>
-                  <input
-                    placeholder="Message"
-                    type="textarea"
+                  <textarea
+                    placeholder="Type your message"
                     className="mb-0 ml-0 mr-0
                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
                   focus:border-black focus:outline-none"
+                    {...register('message', { required: true })}
                   />
                 </div>
                 <div className="relative">
-                  <a
-                    className="ease inline-block w-full border border-gray-300 bg-gray-900 pb-4 pl-5 pr-5 pt-4 text-center text-xl font-medium
-                  text-white  transition duration-200 hover:bg-ripe-plum-900"
-                    onClick={() => console.log('clicked')}
-                  >
+                  <button className="hover:shadow-form rounded-md bg-purple-500 px-8 py-3 text-base font-semibold text-white outline-none">
                     Submit
-                  </a>
+                  </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
+export default Contact;

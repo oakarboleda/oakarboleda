@@ -22,11 +22,11 @@ function Projects() {
           })}
         </div>
         <div className="relative mt-2 w-full pb-20">
-          <Link href="/portfolio">
-            <Button className="mx-auto mt-8 w-full max-w-sm cursor-pointer whitespace-nowrap  px-8 py-3 text-center transition-colors md:max-w-2xl">
-              View All
-            </Button>
-          </Link>
+          {/*<Link href="/portfolio">*/}
+          {/*  <Button className="mx-auto mt-8 w-full max-w-sm cursor-pointer whitespace-nowrap  px-8 py-3 text-center transition-colors md:max-w-2xl">*/}
+          {/*    View All*/}
+          {/*  </Button>*/}
+          {/*</Link>*/}
         </div>
       </div>
     </div>

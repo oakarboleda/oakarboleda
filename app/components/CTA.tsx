@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './global/button';
 import { syne } from '@/app/components/fonts';
+import { router } from 'next/client';
 
 function CTA() {
   return (
@@ -25,7 +26,9 @@ function CTA() {
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              <Button href={'/contact'}>
+              <Button
+                onClick={() => router.push('mailto:hello@oakarboleda.com')}
+              >
                 Contact for Custom Project
                 <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
                   <svg

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         Syne: ['Syne', 'sans-serif'],
+        'sans-serif': ['Inter', 'sans-serif'],
       },
       colors: {
         'ripe-plum': {
