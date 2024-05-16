@@ -1,12 +1,11 @@
-"use client";
-import { useRef } from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import '@/app/ui/global.css';
-import StarsCanvas from "@/app/ui/Scene";
-import Footer from "@/app/ui/Footer";
+'use client';
+import { useEffect, useRef } from 'react';
+import type { Metadata } from 'next';
+import '@/app/styles/custom.scss';
 
-const inter = Inter({ subsets: ["latin"] });
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function RootLayout({
   children,
@@ -14,14 +13,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const containerRef = useRef(null);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <html lang="en">
-    <body>
-      <StarsCanvas />
-      {/* Navbar */}
-      {children}
-      <Footer />
-    </body>
-  </html>
+      <body
+        data-aos-easing="ease"
+        data-aos-duration="600"
+        data-aos-deplay="100"
+      >
+        {children}
+      </body>
+    </html>
   );
 }
