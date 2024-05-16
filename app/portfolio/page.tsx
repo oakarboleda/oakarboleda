@@ -4,7 +4,7 @@ import Page from '@/app/components/Page';
 import React from 'react';
 import AllProjects from '@/app/portfolio/allProjects';
 
-function Portfolio({ ...props }) {
+export function Portfolio({ ...props }) {
   return (
     <Page
       currentPage="Portfolio"
@@ -21,5 +21,3 @@ function Portfolio({ ...props }) {
     </Page>
   );
 }
-
-export default Portfolio;
