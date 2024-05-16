@@ -8,10 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        Syne: ['Syne', 'sans-serif'],
-        'sans-serif': ['Inter', 'sans-serif'],
-      },
       colors: {
         'ripe-plum': {
           '50': '#fbf6fe',

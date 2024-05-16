@@ -5,6 +5,7 @@ import {
   faLinkedinIn,
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 function About() {
   return (
@@ -12,18 +13,17 @@ function About() {
       <div className="container">
         <div className="grid grid-cols-1 gap-[60px] lg:grid-cols-2 xl:gap-[134px]">
           <div className="relative">
-            <img width={350} src="/oak.png" alt="" />
-
-            <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap md:right-[170px] lg:right-[-30px]">
+            <Image width={300} height={300} src="/oak.png" alt="Oak Arboleda" />
+            <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap sm:right-[120px] md:right-[170px] lg:right-[-30px]">
               <span className=" relative inline-block text-[65px] font-bold leading-none text-white before:absolute before:left-[-13px] before:top-[50%] before:-z-[1] before:block before:h-[95px] before:w-[95px] before:translate-y-[-50%] before:rounded-full lg:before:h-[100px] lg:before:w-[100px] xl:text-[80px] xl:before:h-[110px] xl:before:w-[110px]">
                 10+
               </span>
               <span className="stroke shadow">
-                <p className="outline-text">Years of experience</p>
+                <p className="outline-text text-sm">Years of experience</p>
               </span>
             </div>
           </div>
-          <div className="flex flex-col flex-wrap gap-y-2 font-Syne font-bold leading-none">
+          <div className="font-Syne flex flex-col flex-wrap gap-y-2 font-bold leading-none">
             <span className="text-xl text-ripe-plum-600">Hello I’m</span>
             <h3 className="before:bg-primary relative text-4xl tracking-[-1.5px] text-white before:absolute before:left-0 before:top-[2px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:text-5xl lg:before:h-[48px] lg:before:w-[48px] xl:text-[64px] xl:before:h-[64px] xl:before:w-[64px]">
               Oak Arboleda, Software Engineer
@@ -42,35 +42,34 @@ function About() {
             </p>
             <ul className="mb-7 flex flex-wrap gap-9 2xl:gap-[40px]">
               <li>
-                <span className="before:bg-black-300 relative font-Syne text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
-                  <a href="">
-                    {' '}
+                <span className="before:bg-black-300 font-Syne relative text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
+                  <a href="https://github.com/oakarboleda">
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </span>
-                <p className="paragraph"></p>
               </li>
               <li>
-                <span className="before:bg-black-300 relative font-Syne text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
-                  <a href="">
-                    {' '}
+                <span className="before:bg-black-300 font-Syne relative text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
+                  <a href="https://www.linkedin.com/in/oakarboleda/">
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
                 </span>
-                <p className="paragraph"></p>
               </li>
               <li>
-                <span className="before:bg-black-300 relative font-Syne text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
+                <span className="before:bg-black-300 font-Syne relative text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
                   <a href="">
                     <FontAwesomeIcon icon={faBehance} />
                   </a>
                 </span>
-                <p className="paragraph"></p>
               </li>
             </ul>
 
             <div className="flex flex-wrap">
-              <a className="button polygon-btn text-white" href={'/'}>
+              <a
+                className="button polygon-btn text-white"
+                href="/arboleda.pdf"
+                download
+              >
                 Download my resume
                 <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
                   <svg

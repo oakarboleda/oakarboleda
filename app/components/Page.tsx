@@ -52,19 +52,13 @@ function Page({
         <meta property="og:url" content="https://oakarboleda.io/" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={desc} />
-        <meta
-          property="og:image"
-          content="https://braydentw.io/static/misc/og.png"
-        />
+        <meta property="og:image" content="/oak.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://oakarboleda.io/" />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={desc} />
-        <meta
-          property="twitter:image"
-          content="https://oakarboleda.io/static/misc/og.png"
-        ></meta>
+        <meta property="twitter:image" content="" />
       </Head>
       <main>
         <Header />

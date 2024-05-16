@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from './global/button';
 import { syne } from '@/app/components/fonts';
-import { router } from 'next/client';
-
+import { useRouter } from 'next/navigation';
 function CTA() {
+  const router = useRouter();
   return (
     <div className="container text-slate-100">
       <div className="grid grid-cols-12">
@@ -212,19 +212,19 @@ function CTA() {
                   className="transition-all"
                   d="M7 17L17 7"
                   stroke="currentColor"
-                  stroke-opacity="0.6"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeOpacity="0.6"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></path>
                 <path
                   className="transition-all"
                   d="M7 7H17V17"
                   stroke="currentColor"
-                  stroke-opacity="0.6"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeOpacity="0.6"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></path>
               </svg>
             </a>

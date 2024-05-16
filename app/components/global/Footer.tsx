@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import UFO from '@/app/components/UFO';
-import { router } from 'next/client';
-
+import { useRouter } from 'next/navigation';
 function Footer() {
+  const router = useRouter();
   return (
     <footer className="footer bg-baltic-sea-950 pb-[60px] pt-[80px] lg:pt-[100px] xl:pt-[120px]">
       <div className="container">
-        <div
-          className="aos-init aos-animate overflow-x-hidden"
-          data-aos="flip-down"
-        >
+        <div className="overflow-x-hidden" data-aos="flip-down">
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             <div className="pt-12">
               <h3 className="font-Syne text-4xl font-bold tracking-[-1.5px] text-white lg:text-5xl xl:text-[64px]">
