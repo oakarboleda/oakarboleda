@@ -11,8 +11,13 @@ function About() {
     <>
       <div className="container">
         <div className="grid grid-cols-1 gap-[60px] lg:grid-cols-2 xl:gap-[134px]">
-          <div className="relative">
-            <Image width={300} height={300} src="/oak.png" alt="Oak Arboleda" />
+          <div className="absolute">
+            <Image
+              fill
+              src="/oak.png"
+              alt="Oak Arboleda"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap md:right-[170px] lg:right-[-30px]">
               <span className="font-Syne before:bg-primary relative inline-block text-[65px] font-bold leading-none text-white before:absolute before:left-[-13px] before:top-[50%] before:-z-[1] before:block before:h-[95px] before:w-[95px] before:translate-y-[-50%] before:rounded-full lg:before:h-[100px] lg:before:w-[100px] xl:text-[80px] xl:before:h-[110px] xl:before:w-[110px]">
                 10+
@@ -56,7 +61,7 @@ function About() {
               </li>
               <li>
                 <span className="before:bg-black-300 font-Syne relative text-[32px] font-bold leading-10 text-white before:absolute before:left-0 before:right-0 before:top-[0px] before:-z-[1] before:block before:h-[43px] before:w-[43px] before:rounded-full">
-                  <a href="">
+                  <a href="https://www.behance.net/oaknarboleda">
                     <FontAwesomeIcon icon={faBehance} />
                   </a>
                 </span>

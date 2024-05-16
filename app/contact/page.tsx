@@ -19,76 +19,58 @@ const Contact: FC = () => {
 
   return (
     <>
-      <div
-        className="mb-0 ml-auto mr-auto mt-0 flex max-w-7xl flex-col items-center justify-between pb-0 pl-10 pr-10 pt-0
-      lg:flex-row xl:px-5"
-      >
-        <div className="flex w-full flex-col items-center pb-20 pl-10 pr-10 pt-5 lg:flex-row lg:pt-20">
-          <div className="relative w-full max-w-md bg-cover px-3 lg:w-7/12 lg:max-w-2xl">
-            <div className="relative flex h-full w-full flex-col items-center justify-center lg:pr-10">
-              <Astronaut />
-            </div>
+      <div className="bg-gray-50 dark:bg-gray-900" id="contact">
+        <div className="mx-auto max-w-7xl px-4 pt-16 text-center sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold dark:text-gray-100">Contact</h2>
+          <p className="m-auto max-w-2xl pb-6 pt-6 text-center text-base dark:text-gray-400">
+            Want to contact us? Choose an option below and well be happy to show
+            you how we can transform companys web experience.
+          </p>
+        </div>
+        <div className="mx-auto grid max-w-7xl gap-y-8 px-4 pb-16 pt-8 sm:px-6 md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 lg:px-8">
+          <div>
+            <Astronaut />
           </div>
-          <div className="relative z-10 mb-0 ml-0 mr-0 mt-20 w-full max-w-2xl px-3 lg:mt-0 lg:w-5/12">
-            <div
-              className="relative z-10 flex flex-col items-start justify-start rounded-xl bg-white pb-10 pl-10 pr-10
-            pt-10 shadow-2xl"
-            >
-              <p className="w-full text-center text-4xl font-medium leading-snug">
-                Feel Free to Contact me
-              </p>
-              <form
+          <div>
+            <form>
+              <input type="checkbox" id="" className="hidden" name="botcheck" />
+              <div className="mb-5">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  autoComplete="false"
+                  className="w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none ring-gray-100 placeholder:text-gray-800 focus:border-gray-600 focus:ring-4 dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:ring-0 dark:placeholder:text-gray-200 dark:focus:border-white"
+                  name="name"
+                />
+              </div>
+              <div className="mb-5">
+                <label htmlFor="email_address" className="sr-only">
+                  Email Address
+                </label>
+                <input
+                  id="email_address"
+                  type="email"
+                  placeholder="Email Address"
+                  autoComplete="false"
+                  className="w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none ring-gray-100 placeholder:text-gray-800 focus:border-gray-600   focus:ring-4  dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:ring-0 dark:placeholder:text-gray-200 dark:focus:border-white"
+                  name="email"
+                />
+              </div>
+              <div className="mb-3">
+                <textarea
+                  placeholder="Your Message"
+                  className="h-36 w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none   ring-gray-100 placeholder:text-gray-800  focus:border-gray-600 focus:ring-4  dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:ring-0 dark:placeholder:text-gray-200 dark:focus:border-white"
+                  name="message"
+                ></textarea>
+              </div>
+              <button
                 onSubmit={handleSubmit(onSubmit)}
-                className="relative mb-0 ml-0 mr-0 mt-6 w-full space-y-8 "
+                type="submit"
+                className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black "
               >
-                <div className="relative">
-                  <p className="absolute mb-0 ml-2 mr-0 mt-3 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
-                    Name
-                  </p>
-                  <input
-                    placeholder="Full Name"
-                    type="text"
-                    className="mb-0 ml-0 mr-0
-                  mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
-                  focus:border-black focus:outline-none"
-                    {...register('name', { required: true })}
-                  />
-                </div>
-                <div className="relative">
-                  <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
-                    Email
-                  </p>
-                  <input
-                    placeholder="123@ex.com"
-                    type="email"
-                    className="mb-0 ml-0 mr-0
-                  mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
-                  focus:border-black focus:outline-none"
-                    {...register('email', { required: true })}
-                  />
-                </div>
-                <div className="relative">
-                  <p
-                    className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium
-                  text-gray-600"
-                  >
-                    Message
-                  </p>
-                  <textarea
-                    placeholder="Type your message"
-                    className="mb-0 ml-0 mr-0
-                  mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
-                  focus:border-black focus:outline-none"
-                    {...register('message', { required: true })}
-                  />
-                </div>
-                <div className="relative">
-                  <button className="hover:shadow-form rounded-md bg-purple-500 px-8 py-3 text-base font-semibold text-white outline-none">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>

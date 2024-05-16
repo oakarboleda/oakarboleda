@@ -62,8 +62,8 @@ function Page({
         <meta property="twitter:description" content={desc} />
         <meta property="twitter:image" content="" />
       </Head>
+      <Header />
       <main>
-        <Header />
         {children}
         <Analytics />
         <SpeedInsights />
