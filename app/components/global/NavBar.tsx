@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   faBlog,
   faCode,
@@ -10,27 +10,28 @@ import {
   faUserAstronaut,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const links = [
   { id: 1, name: 'Home', href: '/', icon: faHouse },
   {
     id: 2,
     name: 'About',
-    href: '#about',
+    href: '/#about',
     icon: faUserAstronaut,
   },
-  { id: 3, name: 'Portfolio', href: '/portfolio', icon: faCode },
-  { id: 4, name: 'Contact', href: '#contact', icon: faEnvelope },
+  { id: 3, name: 'Portfolio', href: '/#portfolio', icon: faCode },
+  { id: 4, name: 'Contact', href: '/#contact', icon: faEnvelope },
   // { id: 5, name: 'FAQ', href: '/faq', icon: faQuestionCircle },
   // { id: 6, name: 'Blog', href: '/blog', icon: faBlog },
 ];
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const router = useRouter();
   return (
     <header className="absolute top-0 z-10 flex w-full xl:pl-12">
       <div className="hamburger" onClick={toggleMenu}>
@@ -47,9 +48,13 @@ const Header: React.FC = () => {
                 key={link.id}
               >
                 <FontAwesomeIcon className="w-6" icon={link.icon} />
-                <a href={link.href} className="text-white">
+                <Link
+                  href={link.href}
+                  onClick={() => router.push('/#', { scroll: false })}
+                  color="white"
+                >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

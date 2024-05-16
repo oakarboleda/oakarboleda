@@ -1,7 +1,9 @@
+'use client';
 import Link from 'next/link';
 import React from 'react';
 import UFO from '@/app/components/UFO';
 import { useRouter } from 'next/navigation';
+
 function Footer() {
   const router = useRouter();
   return (

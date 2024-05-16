@@ -1,4 +1,3 @@
-import { Button } from '@/app/components/global/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -14,12 +13,12 @@ function About() {
         <div className="grid grid-cols-1 gap-[60px] lg:grid-cols-2 xl:gap-[134px]">
           <div className="relative">
             <Image width={300} height={300} src="/oak.png" alt="Oak Arboleda" />
-            <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap sm:right-[120px] md:right-[170px] lg:right-[-30px]">
-              <span className=" relative inline-block text-[65px] font-bold leading-none text-white before:absolute before:left-[-13px] before:top-[50%] before:-z-[1] before:block before:h-[95px] before:w-[95px] before:translate-y-[-50%] before:rounded-full lg:before:h-[100px] lg:before:w-[100px] xl:text-[80px] xl:before:h-[110px] xl:before:w-[110px]">
+            <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap md:right-[170px] lg:right-[-30px]">
+              <span className="font-Syne before:bg-primary relative inline-block text-[65px] font-bold leading-none text-white before:absolute before:left-[-13px] before:top-[50%] before:-z-[1] before:block before:h-[95px] before:w-[95px] before:translate-y-[-50%] before:rounded-full lg:before:h-[100px] lg:before:w-[100px] xl:text-[80px] xl:before:h-[110px] xl:before:w-[110px]">
                 10+
               </span>
-              <span className="stroke shadow">
-                <p className="outline-text text-sm">Years of experience</p>
+              <span className="outline-text mt-5 text-[90px] text-white sm:text-[60px]">
+                Years of <br /> experience
               </span>
             </div>
           </div>

@@ -99,8 +99,21 @@ $width: 100%;
   /* for demo purpose */
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 90px;
   text-align: center;
+
+  /* Responsive font sizes */
+  @media (max-width: 1200px) {
+    font-size: 90px;
+  }
+  @media (max-width: 992px) {
+    font-size: 85px;
+  }
+  @media (max-width: 768px) {
+    font-size: 70px;
+  }
+  @media (max-width: 576px) {
+    font-size: 60px;
+  }
 }
 
 .paragraph {
