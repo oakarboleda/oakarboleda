@@ -3,6 +3,8 @@ import Head from 'next/head';
 
 import React from 'react';
 import Header from '@/app/components/global/NavBar';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 interface props {
   currentPage: string;
@@ -63,6 +65,8 @@ function Page({
       <main>
         <Header />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </main>
       <Footer />
     </>
