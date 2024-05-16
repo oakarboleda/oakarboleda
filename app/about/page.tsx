@@ -5,18 +5,21 @@ import {
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
+import { Button } from '@/app/components/global/button';
 
 function About() {
   return (
     <>
       <div className="container">
         <div className="grid grid-cols-1 gap-[60px] lg:grid-cols-2 xl:gap-[134px]">
-          <div className="absolute">
+          <div className="relative">
             <Image
-              fill
+              width={300}
+              height={300}
               src="/oak.png"
               alt="Oak Arboleda"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              layout="responsive"
+              objectFit="cover"
             />
             <div className="absolute bottom-0 right-0 z-10 flex flex-col flex-wrap md:right-[170px] lg:right-[-30px]">
               <span className="font-Syne before:bg-primary relative inline-block text-[65px] font-bold leading-none text-white before:absolute before:left-[-13px] before:top-[50%] before:-z-[1] before:block before:h-[95px] before:w-[95px] before:translate-y-[-50%] before:rounded-full lg:before:h-[100px] lg:before:w-[100px] xl:text-[80px] xl:before:h-[110px] xl:before:w-[110px]">
@@ -28,7 +31,7 @@ function About() {
             </div>
           </div>
           <div className="font-Syne flex flex-col flex-wrap gap-y-2 font-bold leading-none">
-            <span className="text-xl text-ripe-plum-600">Hello I’m</span>
+            <span className="text-xl text-ripe-plum-400">Hello I’m</span>
             <h3 className="before:bg-primary relative text-4xl tracking-[-1.5px] text-white before:absolute before:left-0 before:top-[2px] before:-z-[1] before:block before:h-[36px] before:w-[36px] before:rounded-full lg:text-5xl lg:before:h-[48px] lg:before:w-[48px] xl:text-[64px] xl:before:h-[64px] xl:before:w-[64px]">
               Oak Arboleda, Software Engineer
             </h3>
@@ -69,10 +72,9 @@ function About() {
             </ul>
 
             <div className="flex flex-wrap">
-              <a
+              <Button
                 className="button polygon-btn text-white"
                 href="/arboleda.pdf"
-                download
               >
                 Download my resume
                 <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
@@ -101,7 +103,7 @@ function About() {
                     ></path>
                   </svg>
                 </span>
-              </a>
+              </Button>
             </div>
           </div>
         </div>

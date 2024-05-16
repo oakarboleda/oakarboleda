@@ -18,7 +18,7 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
               </h4>
               <p className="paragraph mb-7">
                 Oak Arboleda,{' '}
-                <span className="text-ripe-plum-800">Software Developer</span>,
+                <span className="text-ripe-plum-300">Software Developer</span>,
                 based in USA. With a decade of experience, I've witnessed the
                 transformative power of technology firsthand. I'm excited to
                 continue leveraging my expertise to drive innovation, build
@@ -41,8 +41,8 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
                   <span className="text-black-text-800 w-[110px] text-lg font-normal leading-none">
                     Email
                   </span>
-                  <span className=" font-Syne text-2xl font-bold leading-8">
-                    hello@sharedcreatives.com
+                  <span className="font-Syne text-xl font-bold leading-8">
+                    hello@oakarboleda.io
                   </span>
                 </li>
                 <li className="inline-flex items-center gap-10">
@@ -134,7 +134,7 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
       case 2:
         return (
           <div id="3" className="tab-content">
-            <h4 className="mb-6 font-Syne text-2xl font-bold lg:text-[32px]">
+            <h4 className="font-Syne mb-6 text-2xl font-bold lg:text-[32px]">
               Education
             </h4>
 
@@ -159,7 +159,7 @@ const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
       case 3:
         return (
           <div id="skills_tab" className="tab-content">
-            <h4 className=" mb-6 font-Syne text-2xl font-bold lg:text-[32px]">
+            <h4 className=" font-Syne mb-6 text-2xl font-bold lg:text-[32px]">
               Skills
             </h4>
 

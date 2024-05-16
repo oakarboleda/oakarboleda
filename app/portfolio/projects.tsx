@@ -5,14 +5,16 @@ import ProjectCard from '@/app/portfolio/ProjectCard';
 import Title from '@/app/components/global/Title';
 import { syne } from '../components/fonts';
 import { Button } from '../components/global/button';
+import Heading from '@/app/portfolio/Heading';
 
 function Projects() {
   return (
     <div
-      className="aos-init aos-animate container text-slate-50"
+      className="aos-init aos-animate container text-white"
       data-aos="fade-left"
     >
       <div className="relative flex flex-col justify-between pt-8 text-left">
+        <Heading />
         <div id="learnmore" className={`${syne.className}" text-slate-50`}>
           <Title title="Here are a few of the most recent projects." />
         </div>

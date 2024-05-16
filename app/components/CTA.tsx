@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './global/button';
 import { syne } from '@/app/components/fonts';
 import { useRouter } from 'next/navigation';
+
 function CTA() {
   const router = useRouter();
   return (
@@ -27,6 +28,7 @@ function CTA() {
               data-aos-delay={200}
             >
               <Button
+                className="aria-disabled:opacity-50' flex h-10 px-4 text-sm font-medium transition-colors  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 aria-disabled:cursor-not-allowed"
                 onClick={() => router.push('mailto:hello@oakarboleda.com')}
               >
                 Contact for Custom Project
@@ -189,7 +191,7 @@ function CTA() {
 
           <div className="flex flex-wrap items-end justify-between">
             <div>
-              <h4 className="text-black-800 mb-1 font-Syne text-[32px] font-bold leading-10">
+              <h4 className="text-black-800 font-Syne mb-1 text-[32px] font-bold leading-10">
                 40 hrs
               </h4>
               <p className="text-black-text-600 font-sans text-lg font-normal leading-none">

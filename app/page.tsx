@@ -40,10 +40,10 @@ export default function Home() {
         >
           <Feature />
         </section>
-        <section id="portfolio" className="portfolio-section py-[120px]">
+        <section id="portfolio" className="py-[80px] lg:py-[100px]">
           <Projects />
         </section>
-        <section id="cta" className="bg-transparent py-[120px]">
+        <section id="cta" className="bg-transparent py-[80px] lg:py-[100px]">
           <CTA />
         </section>
         {/*<section className="bg-slate-200 py-[120px]">*/}

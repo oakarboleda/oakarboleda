@@ -23,8 +23,8 @@ const Contact: FC = () => {
         <div className="mx-auto max-w-7xl px-4 pt-16 text-center sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold dark:text-gray-100">Contact</h2>
           <p className="m-auto max-w-2xl pb-6 pt-6 text-center text-base dark:text-gray-400">
-            Want to contact us? Choose an option below and well be happy to show
-            you how we can transform companys web experience.
+            Want to contact me? Choose an option below and well be happy to show
+            you how I can transform companys web experience.
           </p>
         </div>
         <div className="mx-auto grid max-w-7xl gap-y-8 px-4 pb-16 pt-8 sm:px-6 md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 lg:px-8">
