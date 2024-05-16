@@ -54,12 +54,17 @@ export function Hero() {
     <>
       {/* Here we will put a cool terminal component*/}
 
-      <Canvas dpr={[1.5, 2]} linear style={{ width: '100%', height: '100%' }}>
+      <Canvas
+        className="bg"
+        dpr={[1.5, 2]}
+        linear
+        style={{ width: '100%', height: '100%' }}
+      >
         <Text3D
-          position={[-40, 15, -50]}
+          position={[-66, 55, -50]}
           bevelSegments={2} // Adjust the z value here
           size={15}
-          rotation={[0, Math.PI / 4, 0]} // Adjust these values to get the desired rotation
+          rotation={[0, Math.PI / 8, 0]} // Adjust these values to get the desired rotation
           lineHeight={1}
           font={'/RedFive_Regular.json'}
         >
@@ -73,11 +78,11 @@ export function Hero() {
           fov={95}
         ></PerspectiveCamera>
         <Text3D
-          position={[-53, -30, -50]}
+          position={[-66, -30, -50]}
           bevelSegments={2}
           bevelThickness={10} // Adjust the z value here
           size={15}
-          rotation={[0, Math.PI / 4, 0]} // Adjust these values to get the desired rotation
+          rotation={[0, Math.PI / 8, 0]} // Adjust these values to get the desired rotation
           lineHeight={1}
           font={'/RedFive_Regular.json'}
         >

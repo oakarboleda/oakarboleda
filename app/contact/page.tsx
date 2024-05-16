@@ -19,10 +19,10 @@ const Contact: FC = () => {
 
   return (
     <>
-      <div className="bg-gray-50 dark:bg-gray-900" id="contact">
+      <div className="bg-woodsmoke-300" id="contact">
         <div className="mx-auto max-w-7xl px-4 pt-16 text-center sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold dark:text-gray-100">Contact</h2>
-          <p className="m-auto max-w-2xl pb-6 pt-6 text-center text-base dark:text-gray-400">
+          <h2 className="text-4xl font-bold text-white">Contact</h2>
+          <p className="m-auto max-w-2xl pb-6 pt-6 text-center text-base text-white">
             Want to contact me? Choose an option below and well be happy to show
             you how I can transform companys web experience.
           </p>
@@ -39,7 +39,7 @@ const Contact: FC = () => {
                   type="text"
                   placeholder="Full Name"
                   autoComplete="false"
-                  className="w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none ring-gray-100 placeholder:text-gray-800 focus:border-gray-600 focus:ring-4 dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:ring-0 dark:placeholder:text-gray-200 dark:focus:border-white"
+                  className="w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none ring-gray-100 placeholder:text-gray-800 focus:border-gray-600"
                   name="name"
                 />
               </div>
@@ -52,21 +52,21 @@ const Contact: FC = () => {
                   type="email"
                   placeholder="Email Address"
                   autoComplete="false"
-                  className="w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none ring-gray-100 placeholder:text-gray-800 focus:border-gray-600   focus:ring-4  dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:ring-0 dark:placeholder:text-gray-200 dark:focus:border-white"
+                  className="w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none ring-gray-100 placeholder:text-gray-800 focus:border-gray-600"
                   name="email"
                 />
               </div>
               <div className="mb-3">
                 <textarea
                   placeholder="Your Message"
-                  className="h-36 w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none   ring-gray-100 placeholder:text-gray-800  focus:border-gray-600 focus:ring-4  dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:ring-0 dark:placeholder:text-gray-200 dark:focus:border-white"
+                  className="h-36 w-full rounded-md border-2 border-gray-300 px-4 py-3 outline-none   ring-gray-100 placeholder:text-gray-800 focus:border-gray-600"
                   name="message"
                 ></textarea>
               </div>
               <button
                 onSubmit={handleSubmit(onSubmit)}
                 type="submit"
-                className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black "
+                className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none"
               >
                 Send Message
               </button>

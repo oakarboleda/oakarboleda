@@ -8,6 +8,7 @@ import Contact from './contact/page';
 import CTA from './components/CTA';
 import Projects from '@/app/portfolio/projects';
 import About from '@/app/about/page';
+import Ufo from '@/app/components/UFO';
 
 export default function Home() {
   return (
@@ -28,31 +29,23 @@ export default function Home() {
         </section>
         <section
           id="about"
-          className=" aos-init aos-animate bg-slate-900 py-[100px] pb-[120px]"
+          className="aos-init aos-animate py-[55px]"
           data-aos="zoom-out"
           data-aos-delay="300"
         >
           <About />
         </section>
-        <section
-          className="feature-section py-[80px] lg:py-[100px]"
-          id="feature"
-        >
+        <section className="feature-section py-[80px]" id="feature">
           <Feature />
         </section>
-        <section id="portfolio" className="py-[80px] lg:py-[100px]">
+        <section id="portfolio" className="py-[80px]">
           <Projects />
         </section>
-        <section id="cta" className="bg-transparent py-[80px] lg:py-[100px]">
+        <section id="cta" className="bg-transparent py-[80px]">
           <CTA />
         </section>
-        {/*<section className="bg-slate-200 py-[120px]">*/}
-        {/*  <Blog />*/}
-        {/*</section>*/}
-        <section
-          id="contact"
-          className="relative w-full bg-woodsmoke-200 lg:py-20"
-        >
+
+        <section id="contact" className="relative w-full">
           <Contact />
         </section>
       </div>
