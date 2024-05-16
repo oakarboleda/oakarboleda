@@ -3,7 +3,7 @@ import More from '@/app/portfolio/More';
 import React from 'react';
 import AllProjects from '@/app/portfolio/allProjects';
 
-export function Portfolio({ ...props }) {
+export default function Portfolio() {
   return (
     <div className="container top-0 w-full bg-slate-900">
       <Heading />
