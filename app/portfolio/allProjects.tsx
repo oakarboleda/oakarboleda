@@ -1,5 +1,3 @@
-'use client';
-import { useState } from 'react';
 import projects from '@/app/types/projects';
 import ProjectCard from '@/app/portfolio/ProjectCard';
 

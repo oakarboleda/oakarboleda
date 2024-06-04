@@ -1,11 +1,6 @@
-'use client';
-import Link from 'next/link';
 import React from 'react';
-import UFO from '@/app/components/UFO';
-import { useRouter } from 'next/navigation';
 
 function Footer() {
-  const router = useRouter();
   return (
     <footer className="footer bg-slate-900 pb-[60px] pt-[80px] lg:pt-[100px] xl:pt-[120px]">
       <div className="container">
@@ -118,7 +113,7 @@ function Footer() {
               </h3>
               <div className="flex items-center justify-between">
                 <p className="font-Syne text-2xl font-bold leading-none text-ripe-plum-100">
-                  hello@oakarboleda.io
+                  hello@sharedcreatives.com
                 </p>
                 <a
                   href=""

@@ -29,7 +29,7 @@ function CTA() {
             >
               <Button
                 className="aria-disabled:opacity-50' flex h-10 px-4 text-sm font-medium transition-colors  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 aria-disabled:cursor-not-allowed"
-                onClick={() => router.push('mailto:hello@oakarboleda.com')}
+                onClick={() => router.push('mailto:hello@sharedcreatives.com')}
               >
                 Contact for Custom Project
                 <span className="group-hover:animate-arrow-move-up ml-3 inline-block">
@@ -63,6 +63,8 @@ function CTA() {
           </div>
         </div>
       </div>
+
+      {/* Pricing Items */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {/* Pricing Item Start */}
         <div

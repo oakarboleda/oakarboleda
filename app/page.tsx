@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import React from 'react';
 import '@/app/styles/custom.scss';
 import Page from '@/app/components/Page';
 import { Hero } from '@/app/components/Hero/Hero';
@@ -8,7 +8,6 @@ import Contact from './contact/page';
 import CTA from './components/CTA';
 import Projects from '@/app/portfolio/projects';
 import About from '@/app/about/page';
-import Ufo from '@/app/components/UFO';
 
 export default function Home() {
   return (
@@ -44,7 +43,6 @@ export default function Home() {
         <section id="cta" className="bg-transparent py-[80px]">
           <CTA />
         </section>
-
         <section id="contact" className="relative w-full">
           <Contact />
         </section>

@@ -41,7 +41,7 @@ function About() {
             </h4>
             <br />
             <p className="paragraph mb-6">
-              I am a seasoned software developer with a decades of hands-on
+              I am a seasoned software developer with decades of hands-on
               experience in the ever-evolving world of software engineering. My
               passion lies in crafting exceptional applications, and I
               specialize in harnessing its power to deliver cross-platform

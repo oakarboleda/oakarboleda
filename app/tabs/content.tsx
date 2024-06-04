@@ -3,9 +3,7 @@ import React from 'react';
 type TabContentProps = {
   activeTabIndex: number;
 };
-{
-  /* Eventually this will be calling from a database so this will change. */
-}
+
 const TabContent: React.FC<TabContentProps> = ({ activeTabIndex }) => {
   const renderTabContent = () => {
     switch (activeTabIndex) {

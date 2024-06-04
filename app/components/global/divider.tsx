@@ -11,8 +11,8 @@ const Divider: React.FC = () => {
     >
       <defs>
         <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-          <stop stop-color="rgba(7, 7, 16, 1)" offset="0%" />
-          <stop stop-color="rgba(63, 12, 88, 1)" offset="100%" />
+          <stop stopColor="rgba(7, 7, 16, 1)" offset="0%" />
+          <stop stopColor="rgba(63, 12, 88, 1)" offset="100%" />
         </linearGradient>
       </defs>
       <path
